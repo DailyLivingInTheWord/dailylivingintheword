@@ -1,0 +1,1188 @@
+/* =========================================================
+   DAILY LIVING IN THE WORD
+   Main Stylesheet
+   ========================================================= */
+
+
+/* =========================================================
+   RESET
+   ========================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #f7f5ef;
+    color: #292723;
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 1.75;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 1.25rem;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    margin-top: 0;
+    font-weight: normal;
+    line-height: 1.2;
+}
+
+
+/* =========================================================
+   GLOBAL CONTAINERS
+   ========================================================= */
+
+.container {
+    width: 92%;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container.narrow {
+    width: 92%;
+    max-width: 760px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.site-header {
+    border-bottom: 1px solid #dedbd3;
+    background: #f7f5ef;
+    padding: 1.5rem 0;
+}
+
+.site-header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.site-logo {
+    font-size: 1.25rem;
+    letter-spacing: 0.02em;
+    white-space: nowrap;
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.main-nav a {
+    color: #6f6a62;
+    transition: color 0.2s ease;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+    color: #292723;
+}
+
+
+/* =========================================================
+   TYPOGRAPHY
+   ========================================================= */
+
+.eyebrow {
+    margin-bottom: 0.75rem;
+
+    color: #81796d;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    line-height: 1.4;
+    text-transform: uppercase;
+}
+
+.article-meta {
+    margin-bottom: 0.75rem;
+
+    color: #81796d;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.category {
+    margin-bottom: 1rem;
+
+    color: #81796d;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.text-link {
+    display: inline-block;
+
+    color: #625c54;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+}
+
+.text-link:hover {
+    color: #292723;
+}
+
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
+.button {
+    display: inline-block;
+
+    padding: 0.8rem 1.25rem;
+
+    border: 1px solid #292723;
+    background: #292723;
+    color: #f7f5ef;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+
+    transition: all 0.2s ease;
+}
+
+.button:hover {
+    background: transparent;
+    color: #292723;
+}
+
+.button.secondary {
+    background: transparent;
+    color: #292723;
+}
+
+.button.secondary:hover {
+    background: #292723;
+    color: #f7f5ef;
+}
+
+
+/* =========================================================
+   HOME HERO
+   ========================================================= */
+
+.hero {
+    padding: 7rem 0 6rem;
+    border-bottom: 1px solid #dedbd3;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.hero h1 {
+    margin-bottom: 1.5rem;
+
+    font-size: clamp(3rem, 7vw, 5.5rem);
+    letter-spacing: -0.04em;
+}
+
+.hero p {
+    max-width: 650px;
+
+    color: #5e5952;
+    font-size: 1.2rem;
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    margin-top: 2rem;
+}
+
+
+/* =========================================================
+   GENERAL SECTIONS
+   ========================================================= */
+
+.content-section {
+    padding: 5rem 0;
+}
+
+.content-section h2 {
+    margin-bottom: 1.5rem;
+
+    font-size: clamp(2rem, 4vw, 3rem);
+    letter-spacing: -0.025em;
+}
+
+.content-section h3 {
+    margin-bottom: 0.75rem;
+    font-size: 1.45rem;
+}
+
+.content-section p {
+    color: #504c46;
+}
+
+.alt-section {
+    background: #efede6;
+}
+
+
+/* =========================================================
+   PAGE HEADER
+   ========================================================= */
+
+.page-header {
+    padding: 5.5rem 0 4rem;
+
+    border-bottom: 1px solid #dedbd3;
+}
+
+.page-header h1 {
+    margin-bottom: 1.25rem;
+
+    font-size: clamp(3rem, 7vw, 5rem);
+    letter-spacing: -0.04em;
+}
+
+.page-intro {
+    max-width: 680px;
+    margin-bottom: 0;
+
+    color: #5e5952;
+    font-size: 1.2rem;
+}
+
+
+/* =========================================================
+   FEATURED ARTICLE
+   ========================================================= */
+
+.featured-article {
+    padding: 5rem 0;
+}
+
+.featured-article > .container > .eyebrow {
+    margin-bottom: 2rem;
+}
+
+.featured-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+
+    align-items: center;
+}
+
+.featured-grid h2 {
+    margin-bottom: 1rem;
+
+    font-size: clamp(2.3rem, 5vw, 3.6rem);
+    letter-spacing: -0.035em;
+}
+
+.featured-grid > div:first-child > p:not(.article-meta) {
+    max-width: 650px;
+
+    color: #5e5952;
+    font-size: 1.08rem;
+}
+
+.featured-image-placeholder {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #e7e3da;
+    color: #81796d;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   ARTICLE LIST SECTION
+   ========================================================= */
+
+.article-list-section {
+    padding: 5rem 0;
+    border-top: 1px solid #dedbd3;
+}
+
+.article-list-section .section-heading {
+    margin-bottom: 2rem;
+}
+
+.article-list-section .section-heading h2 {
+    margin-bottom: 0;
+
+    font-size: clamp(2rem, 4vw, 3rem);
+}
+
+
+/* =========================================================
+   SECTION HEADINGS
+   ========================================================= */
+
+.section-heading {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    gap: 2rem;
+}
+
+
+/* =========================================================
+   ARTICLE FILTERS
+   ========================================================= */
+
+.article-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+
+    margin-bottom: 3rem;
+}
+
+.filter-button {
+    padding: 0.55rem 0.9rem;
+
+    border: 1px solid #cfcac0;
+    background: transparent;
+    color: #625e57;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.68rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+
+    cursor: pointer;
+}
+
+.filter-button:hover,
+.filter-button.active {
+    border-color: #292723;
+    background: #292723;
+    color: #f7f5ef;
+}
+
+
+/* =========================================================
+   ARTICLE GRID
+   ========================================================= */
+
+.article-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem 2rem;
+}
+
+.article-card {
+    border-top: 1px solid #292723;
+    padding-top: 1rem;
+}
+
+.article-card-image {
+    display: block;
+
+    width: 100%;
+    aspect-ratio: 16 / 10;
+
+    margin-bottom: 1.25rem;
+
+    overflow: hidden;
+    background: #e7e3da;
+}
+
+.article-card-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.3s ease;
+}
+
+.article-card-image:hover img {
+    transform: scale(1.02);
+}
+
+.article-card h3 {
+    margin-bottom: 0.75rem;
+
+    font-size: 1.45rem;
+}
+
+.article-card h3 a:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 4px;
+}
+
+.article-card p:not(.article-meta) {
+    color: #625e57;
+    font-size: 0.95rem;
+}
+
+
+/* =========================================================
+   ARTICLES PAGE — LEGACY SUPPORT
+   ========================================================= */
+
+.article-list {
+    padding: 5rem 0;
+}
+
+.article-list-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem 2rem;
+}
+
+.article-list-card {
+    border-top: 1px solid #292723;
+    padding-top: 1rem;
+}
+
+.article-list-card-image {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+
+    margin-bottom: 1.25rem;
+
+    overflow: hidden;
+    background: #e7e3da;
+}
+
+.article-list-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.article-list-card h2 {
+    margin-bottom: 0.75rem;
+    font-size: 1.7rem;
+}
+
+.article-list-card p {
+    color: #625e57;
+}
+
+
+/* =========================================================
+   SINGLE ARTICLE
+   ========================================================= */
+
+.single-article {
+    padding: 4.5rem 0 6rem;
+}
+
+.article-header {
+    max-width: 850px;
+    margin: 0 auto 3rem;
+}
+
+.article-header h1 {
+    margin-bottom: 1.5rem;
+
+    font-size: clamp(2.8rem, 6vw, 5rem);
+    letter-spacing: -0.04em;
+}
+
+.article-subtitle {
+    max-width: 720px;
+
+    color: #625e57;
+    font-size: 1.2rem;
+}
+
+.article-date {
+    margin-top: 1.25rem;
+
+    color: #81796d;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.article-cover {
+    width: 100%;
+    margin: 0 auto 4rem;
+}
+
+.article-cover img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+
+    object-fit: cover;
+}
+
+.article-cover-placeholder {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #e7e3da;
+    color: #81796d;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.cover-placeholder {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #e7e3da;
+    color: #81796d;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.article-body {
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+.article-body p {
+    margin-bottom: 1.5rem;
+
+    color: #3e3b36;
+    font-size: 1.08rem;
+}
+
+.article-body h1 {
+    margin-bottom: 1.5rem;
+    font-size: 2.8rem;
+}
+
+.article-body h2 {
+    margin-top: 3.5rem;
+    margin-bottom: 1.25rem;
+
+    font-size: 2rem;
+}
+
+.article-body h3 {
+    margin-top: 3rem;
+    margin-bottom: 1.25rem;
+
+    font-size: 1.6rem;
+}
+
+.article-body strong {
+    color: #292723;
+}
+
+.article-body em {
+    color: #504c46;
+}
+
+.article-body blockquote {
+    margin: 2.5rem 0;
+    padding: 1.5rem 0 1.5rem 1.5rem;
+
+    border-left: 2px solid #81796d;
+
+    color: #504c46;
+    font-size: 1.35rem;
+    font-style: italic;
+}
+
+.article-body ul,
+.article-body ol {
+    margin-bottom: 1.5rem;
+    padding-left: 1.5rem;
+}
+
+.article-body li {
+    margin-bottom: 0.5rem;
+}
+
+
+/* =========================================================
+   PULL QUOTE
+   ========================================================= */
+
+.pull-quote {
+    margin: 3rem 0;
+    padding: 2rem;
+
+    background: #efede6;
+
+    text-align: center;
+}
+
+.pull-quote p {
+    margin-bottom: 0;
+
+    color: #292723;
+    font-size: 1.45rem;
+    font-style: italic;
+}
+
+
+/* =========================================================
+   SCRIPTURE BOX
+   ========================================================= */
+
+.scripture-box {
+    margin: 3rem 0;
+    padding: 2rem;
+
+    border-top: 1px solid #292723;
+    border-bottom: 1px solid #292723;
+}
+
+.scripture-box p {
+    margin-bottom: 0.75rem;
+}
+
+.scripture-box p:last-child {
+    margin-bottom: 0;
+
+    color: #81796d;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   ARTICLE FOOTER
+   ========================================================= */
+
+.article-footer,
+.article-back {
+    max-width: 760px;
+    margin: 4rem auto 0;
+
+    padding-top: 2rem;
+    border-top: 1px solid #dedbd3;
+}
+
+.back-link,
+.article-back a {
+    color: #625e57;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.back-link:hover,
+.article-back a:hover {
+    color: #292723;
+}
+
+
+/* =========================================================
+   DARK FEATURE
+   ========================================================= */
+
+.dark-feature {
+    padding: 5rem 0;
+
+    background: #292723;
+    color: #f7f5ef;
+}
+
+.dark-feature .eyebrow {
+    color: #b5aea2;
+}
+
+.dark-feature h2 {
+    margin-bottom: 1.5rem;
+
+    font-size: clamp(2.3rem, 5vw, 4rem);
+    letter-spacing: -0.03em;
+}
+
+.dark-feature p {
+    color: #d4d0c8;
+}
+
+.dark-feature p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =========================================================
+   ABOUT PAGE
+   ========================================================= */
+
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 1px;
+
+    margin-top: 2.5rem;
+
+    background: #d8d4ca;
+    border: 1px solid #d8d4ca;
+}
+
+.about-card {
+    padding: 2.25rem;
+
+    background: #f7f5ef;
+}
+
+.about-card h3 {
+    margin-bottom: 0.75rem;
+
+    font-size: 1.5rem;
+}
+
+.about-card p {
+    margin-bottom: 1.25rem;
+}
+
+.about-card .text-link {
+    margin-top: 0.25rem;
+}
+
+.about-card:hover {
+    background: #efede6;
+}
+
+
+/* =========================================================
+   SCRIPTURE SECTION
+   ========================================================= */
+
+.scripture-section {
+    padding: 5.5rem 0;
+
+    border-top: 1px solid #dedbd3;
+    border-bottom: 1px solid #dedbd3;
+
+    text-align: center;
+}
+
+.scripture-section blockquote {
+    max-width: 800px;
+
+    margin: 0 auto 1.25rem;
+
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    font-style: italic;
+    line-height: 1.35;
+}
+
+.scripture-section p:last-child {
+    margin-bottom: 0;
+
+    color: #81796d;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   INSTAGRAM SECTION
+   ========================================================= */
+
+.instagram-section {
+    padding: 5rem 0;
+
+    border-top: 1px solid #dedbd3;
+}
+
+.instagram-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 2rem;
+}
+
+.instagram-content h2 {
+    margin-bottom: 0.75rem;
+    font-size: 2rem;
+}
+
+.instagram-content p {
+    margin-bottom: 0;
+    color: #625e57;
+}
+
+.instagram-link {
+    flex-shrink: 0;
+
+    padding: 0.8rem 1.1rem;
+
+    border: 1px solid #292723;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.instagram-link:hover {
+    background: #292723;
+    color: #f7f5ef;
+}
+
+
+/* =========================================================
+   BIBLE / THEOLOGY / RESOURCE CARDS
+   ========================================================= */
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.info-card {
+    padding: 2rem;
+
+    border: 1px solid #d8d4ca;
+    background: #f7f5ef;
+}
+
+.info-card h3 {
+    margin-bottom: 0.75rem;
+    font-size: 1.35rem;
+}
+
+.info-card p {
+    color: #625e57;
+    font-size: 0.95rem;
+}
+
+
+/* =========================================================
+   BOOKS / BIBLE LISTS
+   ========================================================= */
+
+.book-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem 3rem;
+}
+
+.book-list {
+    list-style: none;
+
+    margin: 0;
+    padding: 0;
+}
+
+.book-list li {
+    padding: 0.7rem 0;
+
+    border-bottom: 1px solid #dedbd3;
+}
+
+.book-list a {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.book-list a:hover {
+    color: #81796d;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.site-footer {
+    padding: 3.5rem 0;
+
+    border-top: 1px solid #dedbd3;
+
+    background: #efede6;
+}
+
+.site-footer .container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 2rem;
+}
+
+.site-footer p {
+    max-width: 600px;
+
+    margin-bottom: 0;
+
+    color: #706b63;
+    font-size: 0.85rem;
+}
+
+.site-footer .footer-brand {
+    color: #292723;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.68rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   RESPONSIVE — TABLET
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+    .site-header .container {
+        flex-direction: column;
+        align-items: flex-start;
+
+        gap: 1rem;
+    }
+
+    .main-nav {
+        justify-content: flex-start;
+        gap: 1rem 1.25rem;
+    }
+
+    .hero {
+        padding: 5rem 0 4.5rem;
+    }
+
+    .featured-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .article-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .article-list-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .card-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .instagram-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .site-footer .container {
+        flex-direction: column;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE — MOBILE
+   ========================================================= */
+
+@media (max-width: 500px) {
+
+    body {
+        line-height: 1.65;
+    }
+
+    .container,
+    .container.narrow {
+        width: 90%;
+    }
+
+    .site-header {
+        padding: 1.25rem 0;
+    }
+
+    .site-logo {
+        font-size: 1.1rem;
+    }
+
+    .main-nav {
+        width: 100%;
+
+        gap: 0.75rem 1rem;
+
+        font-size: 0.65rem;
+    }
+
+    .hero {
+        padding: 4rem 0;
+    }
+
+    .hero h1 {
+        font-size: 2.8rem;
+    }
+
+    .hero p {
+        font-size: 1.05rem;
+    }
+
+    .content-section,
+    .featured,
+    .featured-article,
+    .latest,
+    .article-list,
+    .article-list-section,
+    .instagram-section {
+        padding: 3.5rem 0;
+    }
+
+    .page-header {
+        padding: 4rem 0 3rem;
+    }
+
+    .page-header h1 {
+        font-size: 3rem;
+    }
+
+    .page-intro {
+        font-size: 1.05rem;
+    }
+
+    .article-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .book-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-card {
+        padding: 1.5rem;
+    }
+
+    .dark-feature {
+        padding: 3.5rem 0;
+    }
+
+    .dark-feature h2 {
+        font-size: 2.3rem;
+    }
+
+    .scripture-section {
+        padding: 4rem 0;
+    }
+
+    .scripture-section blockquote {
+        font-size: 1.8rem;
+    }
+
+    .single-article {
+        padding: 3.5rem 0 4rem;
+    }
+
+    .article-header h1 {
+        font-size: 2.7rem;
+    }
+
+    .article-subtitle {
+        font-size: 1.05rem;
+    }
+
+    .article-body p {
+        font-size: 1rem;
+    }
+
+    .article-body blockquote {
+        font-size: 1.15rem;
+    }
+
+    .pull-quote {
+        padding: 1.5rem;
+    }
+
+    .pull-quote p {
+        font-size: 1.2rem;
+    }
+
+    .site-footer {
+        padding: 2.5rem 0;
+    }
+}

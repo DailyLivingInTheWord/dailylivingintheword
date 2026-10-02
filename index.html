@@ -1,0 +1,1207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Daily Living in the Word — Rooted in Scripture. Living for Christ."
+    >
+
+    <title>
+        Daily Living in the Word
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+
+    <!-- =========================================================
+         HOMEPAGE-SPECIFIC STYLES
+         ========================================================= -->
+
+    <style>
+
+        .home-page {
+            background: #f7f5ef;
+        }
+
+
+        /* ---------------------------------------------------------
+           HERO
+           --------------------------------------------------------- */
+
+        .home-hero {
+            min-height: 680px;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid #ddd9d0;
+        }
+
+
+        .home-hero-inner {
+            padding: 110px 0 120px;
+        }
+
+
+        .home-eyebrow {
+            margin: 0 0 34px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 0.95rem;
+            font-weight: 600;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: #5f5a53;
+        }
+
+
+        .home-hero h1 {
+            max-width: 1050px;
+            margin: 0;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: clamp(4.5rem, 8vw, 8.5rem);
+            line-height: 0.91;
+            font-weight: 400;
+            letter-spacing: -0.055em;
+            color: #282623;
+        }
+
+
+        .home-hero-description {
+            max-width: 760px;
+            margin: 48px 0 0;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 1.35rem;
+            line-height: 1.55;
+            color: #625d56;
+        }
+
+
+
+        /* ---------------------------------------------------------
+           FEATURED ARTICLE
+           --------------------------------------------------------- */
+
+        .home-featured {
+            border-bottom: 1px solid #ddd9d0;
+        }
+
+
+        .home-featured-inner {
+            display: grid;
+            grid-template-columns: 0.9fr 1.1fr;
+            min-height: 650px;
+        }
+
+
+        .home-featured-image {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 70px 70px 70px 0;
+        }
+
+
+        .home-featured-image img {
+            display: block;
+            width: 100%;
+            max-width: 540px;
+            height: auto;
+            object-fit: cover;
+        }
+
+
+        .home-featured-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 90px 0 90px 90px;
+            border-left: 1px solid #ddd9d0;
+        }
+
+
+        .home-featured-label {
+            margin: 0 0 22px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 0.82rem;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: #817a70;
+        }
+
+
+        .home-featured-content h2 {
+            max-width: 650px;
+            margin: 0;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: clamp(3rem, 5vw, 5.5rem);
+            line-height: 0.98;
+            font-weight: 400;
+            letter-spacing: -0.045em;
+            color: #282623;
+        }
+
+
+        .home-featured-content p {
+            max-width: 610px;
+            margin: 34px 0 0;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 1.18rem;
+            line-height: 1.65;
+            color: #5f5a53;
+        }
+
+
+        .home-featured-link {
+            display: inline-block;
+            margin-top: 34px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 0.9rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            color: #282623;
+            text-decoration: none;
+            border-bottom: 1px solid #282623;
+            padding-bottom: 5px;
+            width: fit-content;
+        }
+
+
+        .home-featured-link:hover {
+            opacity: 0.65;
+        }
+
+
+
+        /* ---------------------------------------------------------
+           ARTICLES
+           --------------------------------------------------------- */
+
+        .home-articles {
+            padding: 105px 0 115px;
+            border-bottom: 1px solid #ddd9d0;
+        }
+
+
+        .home-section-header {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            gap: 40px;
+            margin-bottom: 55px;
+        }
+
+
+        .home-section-label {
+            margin: 0 0 15px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 0.82rem;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: #817a70;
+        }
+
+
+        .home-section-header h2 {
+            margin: 0;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: clamp(2.7rem, 4vw, 4rem);
+            line-height: 1;
+            font-weight: 400;
+            letter-spacing: -0.04em;
+            color: #282623;
+        }
+
+
+        .home-view-all {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 0.88rem;
+            font-weight: 600;
+            color: #282623;
+            text-decoration: none;
+            white-space: nowrap;
+            border-bottom: 1px solid #282623;
+            padding-bottom: 5px;
+        }
+
+
+        .home-view-all:hover {
+            opacity: 0.65;
+        }
+
+
+        .home-article-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0;
+            border-top: 1px solid #ddd9d0;
+            border-bottom: 1px solid #ddd9d0;
+        }
+
+
+        .home-article {
+            padding: 0 32px 45px;
+        }
+
+
+        .home-article:first-child {
+            padding-left: 0;
+        }
+
+
+        .home-article:last-child {
+            padding-right: 0;
+        }
+
+
+        .home-article + .home-article {
+            border-left: 1px solid #ddd9d0;
+        }
+
+
+        .home-article-image {
+            display: block;
+            margin: 0 0 30px;
+            overflow: hidden;
+        }
+
+
+        .home-article-image img {
+            display: block;
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+
+        .home-article-image:hover img {
+            transform: scale(1.025);
+        }
+
+
+        .home-article-category {
+            margin: 0 0 13px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 0.76rem;
+            font-weight: 600;
+            letter-spacing: 0.13em;
+            text-transform: uppercase;
+            color: #817a70;
+        }
+
+
+        .home-article h3 {
+            margin: 0;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 2rem;
+            line-height: 1.08;
+            font-weight: 400;
+            letter-spacing: -0.025em;
+            color: #282623;
+        }
+
+
+        .home-article h3 a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+
+        .home-article h3 a:hover {
+            opacity: 0.65;
+        }
+
+
+        .home-article p {
+            margin: 20px 0 0;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #625d56;
+        }
+
+
+
+        /* ---------------------------------------------------------
+           SITE AREAS
+           --------------------------------------------------------- */
+
+        .home-areas {
+            padding: 100px 0;
+            border-bottom: 1px solid #ddd9d0;
+        }
+
+
+        .home-areas-intro {
+            max-width: 700px;
+            margin-bottom: 60px;
+        }
+
+
+        .home-areas-intro h2 {
+            margin: 0;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: clamp(2.8rem, 4vw, 4.2rem);
+            line-height: 1;
+            font-weight: 400;
+            letter-spacing: -0.04em;
+            color: #282623;
+        }
+
+
+        .home-area-list {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            border-top: 1px solid #ddd9d0;
+        }
+
+
+        .home-area {
+            padding: 35px 35px 35px 0;
+        }
+
+
+        .home-area + .home-area {
+            padding-left: 35px;
+            border-left: 1px solid #ddd9d0;
+        }
+
+
+        .home-area h3 {
+            margin: 0;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 2.1rem;
+            line-height: 1.1;
+            font-weight: 400;
+            color: #282623;
+        }
+
+
+        .home-area p {
+            margin: 16px 0 0;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #625d56;
+        }
+
+
+        .home-area a {
+            display: inline-block;
+            margin-top: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.06em;
+            color: #282623;
+            text-decoration: none;
+        }
+
+
+
+        /* ---------------------------------------------------------
+           SCRIPTURE
+           --------------------------------------------------------- */
+
+        .home-scripture {
+            padding: 120px 0 125px;
+            text-align: center;
+        }
+
+
+        .home-scripture-label {
+            margin: 0 0 30px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: #817a70;
+        }
+
+
+        .home-scripture blockquote {
+            max-width: 850px;
+            margin: 0 auto;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: clamp(2.3rem, 4vw, 4rem);
+            line-height: 1.15;
+            font-weight: 400;
+            font-style: italic;
+            letter-spacing: -0.025em;
+            color: #282623;
+        }
+
+
+        .home-scripture-reference {
+            margin: 30px 0 0;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.13em;
+            text-transform: uppercase;
+            color: #817a70;
+        }
+
+
+
+        /* ---------------------------------------------------------
+           INSTAGRAM
+           --------------------------------------------------------- */
+
+        .home-instagram {
+            padding: 55px 0;
+            border-top: 1px solid #ddd9d0;
+            border-bottom: 1px solid #ddd9d0;
+        }
+
+
+        .home-instagram-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 50px;
+        }
+
+
+        .home-instagram p {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 0.78rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: #817a70;
+        }
+
+
+        .home-instagram a {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #282623;
+            text-decoration: none;
+            border-bottom: 1px solid #282623;
+            padding-bottom: 5px;
+        }
+
+
+
+        /* ---------------------------------------------------------
+           RESPONSIVE
+           --------------------------------------------------------- */
+
+        @media (max-width: 900px) {
+
+            .home-hero {
+                min-height: auto;
+            }
+
+
+            .home-hero-inner {
+                padding: 80px 0 90px;
+            }
+
+
+            .home-hero h1 {
+                font-size: clamp(3.7rem, 12vw, 6rem);
+            }
+
+
+            .home-featured-inner {
+                grid-template-columns: 1fr;
+            }
+
+
+            .home-featured-image {
+                padding: 60px 0 20px;
+            }
+
+
+            .home-featured-image img {
+                max-width: 620px;
+            }
+
+
+            .home-featured-content {
+                padding: 55px 0 75px;
+                border-left: 0;
+            }
+
+
+            .home-article-grid {
+                grid-template-columns: 1fr;
+            }
+
+
+            .home-article {
+                padding: 45px 0;
+            }
+
+
+            .home-article:first-child {
+                padding-top: 45px;
+            }
+
+
+            .home-article:last-child {
+                padding-bottom: 45px;
+            }
+
+
+            .home-article + .home-article {
+                border-left: 0;
+                border-top: 1px solid #ddd9d0;
+            }
+
+
+            .home-area-list {
+                grid-template-columns: 1fr;
+            }
+
+
+            .home-area {
+                padding: 30px 0;
+            }
+
+
+            .home-area + .home-area {
+                padding-left: 0;
+                border-left: 0;
+                border-top: 1px solid #ddd9d0;
+            }
+
+        }
+
+
+        @media (max-width: 600px) {
+
+            .home-hero-inner {
+                padding: 65px 0 75px;
+            }
+
+
+            .home-eyebrow {
+                margin-bottom: 25px;
+                font-size: 0.78rem;
+            }
+
+
+            .home-hero h1 {
+                font-size: 3.55rem;
+                line-height: 0.94;
+            }
+
+
+            .home-hero-description {
+                margin-top: 32px;
+                font-size: 1.1rem;
+            }
+
+
+            .home-featured-content h2 {
+                font-size: 3rem;
+            }
+
+
+            .home-section-header {
+                display: block;
+                margin-bottom: 40px;
+            }
+
+
+            .home-view-all {
+                display: inline-block;
+                margin-top: 22px;
+            }
+
+
+            .home-articles,
+            .home-areas {
+                padding: 75px 0;
+            }
+
+
+            .home-scripture {
+                padding: 85px 0;
+            }
+
+
+            .home-scripture blockquote {
+                font-size: 2.25rem;
+            }
+
+
+            .home-instagram-inner {
+                display: block;
+            }
+
+
+            .home-instagram a {
+                display: inline-block;
+                margin-top: 18px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+
+<body class="home-page">
+
+
+
+<!-- =========================================================
+     HEADER
+     ========================================================= -->
+
+<header class="site-header">
+
+    <div class="container">
+
+        <a
+            class="site-logo"
+            href="index.html"
+        >
+            Daily Living in the Word
+        </a>
+
+
+        <nav class="main-nav">
+
+            <a
+                href="index.html"
+                class="active"
+            >
+                Home
+            </a>
+
+            <a href="articles.html">
+                Articles
+            </a>
+
+            <a href="bible.html">
+                Bible
+            </a>
+
+            <a href="theology.html">
+                Theology
+            </a>
+
+            <a href="resources.html">
+                Resources
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+
+<main>
+
+
+
+<!-- =========================================================
+     HERO
+     ========================================================= -->
+
+<section class="home-hero">
+
+    <div class="container">
+
+        <div class="home-hero-inner">
+
+            <p class="home-eyebrow">
+                Daily Living in the Word
+            </p>
+
+
+            <h1>
+                Rooted in Scripture.<br>
+                Living for Christ.
+            </h1>
+
+
+            <p class="home-hero-description">
+                Biblical truth, thoughtful theology, and encouragement
+                for the Christian life.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     FEATURED ARTICLE
+     ========================================================= -->
+
+<section class="home-featured">
+
+    <div class="container">
+
+        <div class="home-featured-inner">
+
+
+            <!-- COVER -->
+
+            <div class="home-featured-image">
+
+                <a href="article-pastor-falls.html">
+
+                    <img
+                        src="images/pastor-falls-cover.png"
+                        alt="When a Pastor Falls"
+                    >
+
+                </a>
+
+            </div>
+
+
+
+            <!-- ARTICLE -->
+
+            <div class="home-featured-content">
+
+                <p class="home-featured-label">
+                    Featured Article · Church
+                </p>
+
+
+                <h2>
+                    When a Pastor Falls
+                </h2>
+
+
+                <p>
+                    What happens to our faith when someone we respected,
+                    trusted, and learned from falls into serious sin?
+                </p>
+
+
+                <p>
+                    A reflection on what happens when a spiritual leader
+                    falls — and why our hope must ultimately rest in
+                    Christ rather than in His servants.
+                </p>
+
+
+                <a
+                    class="home-featured-link"
+                    href="article-pastor-falls.html"
+                >
+                    Read the article →
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     RECENT ARTICLES
+     ========================================================= -->
+
+<section class="home-articles">
+
+    <div class="container">
+
+
+        <div class="home-section-header">
+
+            <div>
+
+                <p class="home-section-label">
+                    From the Journal
+                </p>
+
+                <h2>
+                    Recent Articles
+                </h2>
+
+            </div>
+
+
+            <a
+                class="home-view-all"
+                href="articles.html"
+            >
+                View all articles →
+            </a>
+
+        </div>
+
+
+
+        <div class="home-article-grid">
+
+
+            <!-- ARTICLE 1 -->
+
+            <article class="home-article">
+
+                <a
+                    class="home-article-image"
+                    href="article-pastor-falls.html"
+                >
+
+                    <img
+                        src="images/pastor-falls-cover.png"
+                        alt="When a Pastor Falls"
+                    >
+
+                </a>
+
+
+                <p class="home-article-category">
+                    Church · Reflection
+                </p>
+
+
+                <h3>
+
+                    <a href="article-pastor-falls.html">
+                        When a Pastor Falls
+                    </a>
+
+                </h3>
+
+
+                <p>
+                    Keeping our eyes on Christ when His servants fail.
+                </p>
+
+            </article>
+
+
+
+            <!-- ARTICLE 2 -->
+
+            <article class="home-article">
+
+                <a
+                    class="home-article-image"
+                    href="article-shepherd-rumours.html"
+                >
+
+                    <img
+                        src="images/shepherd-rumours-cover.png"
+                        alt="When the Shepherd Becomes the Source of the Rumours"
+                    >
+
+                </a>
+
+
+                <p class="home-article-category">
+                    Church · Truth
+                </p>
+
+
+                <h3>
+
+                    <a href="article-shepherd-rumours.html">
+                        When the Shepherd Becomes
+                        the Source of the Rumours
+                    </a>
+
+                </h3>
+
+
+                <p>
+                    When pastoral influence is used to spread stories,
+                    protect sin, and silence uncomfortable questions.
+                </p>
+
+            </article>
+
+
+
+            <!-- ARTICLE 3 -->
+
+            <article class="home-article">
+
+                <a
+                    class="home-article-image"
+                    href="article-spiritual-leaders-fail.html"
+                >
+
+                    <img
+                        src="images/spiritual-leaders-fail-cover.png"
+                        alt="When Spiritual Leaders Fail You"
+                    >
+
+                </a>
+
+
+                <p class="home-article-category">
+                    Christian Living
+                </p>
+
+
+                <h3>
+
+                    <a href="article-spiritual-leaders-fail.html">
+                        When Spiritual Leaders Fail You:
+                        How Do You Keep Going?
+                    </a>
+
+                </h3>
+
+
+                <p>
+                    How do you keep loving Christ and His church
+                    when spiritual leaders have hurt you?
+                </p>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     SITE AREAS
+     ========================================================= -->
+
+<section class="home-areas">
+
+    <div class="container">
+
+
+        <div class="home-areas-intro">
+
+            <p class="home-section-label">
+                Explore
+            </p>
+
+
+            <h2>
+                Scripture at the centre.
+                Everything else flows from it.
+            </h2>
+
+        </div>
+
+
+
+        <div class="home-area-list">
+
+
+            <!-- BIBLE -->
+
+            <div class="home-area">
+
+                <h3>
+                    Bible
+                </h3>
+
+
+                <p>
+                    Reading plans, Scripture resources, and practical
+                    ways to remain in God's Word.
+                </p>
+
+
+                <a href="bible.html">
+                    Explore Bible →
+                </a>
+
+            </div>
+
+
+
+            <!-- THEOLOGY -->
+
+            <div class="home-area">
+
+                <h3>
+                    Theology
+                </h3>
+
+
+                <p>
+                    Biblical doctrine and careful thinking about
+                    God, salvation, the church, and the Christian life.
+                </p>
+
+
+                <a href="theology.html">
+                    Explore Theology →
+                </a>
+
+            </div>
+
+
+
+            <!-- RESOURCES -->
+
+            <div class="home-area">
+
+                <h3>
+                    Resources
+                </h3>
+
+
+                <p>
+                    Reading plans, studies, downloads, and other
+                    resources for growing in grace and truth.
+                </p>
+
+
+                <a href="resources.html">
+                    View Resources →
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     SCRIPTURE
+     ========================================================= -->
+
+<section class="home-scripture">
+
+    <div class="container">
+
+
+        <p class="home-scripture-label">
+            Scripture
+        </p>
+
+
+        <blockquote>
+            “Let the word of Christ dwell
+            in you richly.”
+        </blockquote>
+
+
+        <p class="home-scripture-reference">
+            Colossians 3:16
+        </p>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     INSTAGRAM
+     ========================================================= -->
+
+<section class="home-instagram">
+
+    <div class="container">
+
+        <div class="home-instagram-inner">
+
+
+            <p>
+                Daily Living in the Word ·
+                @dailylivingintheword
+            </p>
+
+
+            <a
+                href="https://www.instagram.com/dailylivingintheword/"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Follow on Instagram →
+            </a>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+</main>
+
+
+
+<!-- =========================================================
+     FOOTER
+     ========================================================= -->
+
+<footer class="site-footer">
+
+    <div class="container">
+
+        <p>
+            “Let the word of Christ dwell in you richly.”
+            — Colossians 3:16
+        </p>
+
+
+        <p class="footer-brand">
+            Daily Living in the Word
+        </p>
+
+
+        <p>
+            Biblical truth for everyday life.
+        </p>
+
+
+        <p class="copyright">
+            © 2026 Daily Living in the Word
+        </p>
+
+    </div>
+
+</footer>
+
+
+
+</body>
+
+</html>

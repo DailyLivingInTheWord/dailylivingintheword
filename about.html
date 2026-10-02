@@ -1,0 +1,1069 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="About Daily Living in the Word — rooted in Scripture and living for Christ."
+    >
+
+    <title>About | Daily Living in the Word</title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+    <style>
+
+        :root {
+            --about-ivory: #f5f1e8;
+            --about-paper: #faf8f2;
+            --about-charcoal: #292724;
+            --about-muted: #6f6a62;
+            --about-line: #d9d3c8;
+        }
+
+
+        body {
+            background: var(--about-ivory);
+            color: var(--about-charcoal);
+        }
+
+
+        .about-page {
+            overflow: hidden;
+        }
+
+
+        .about-container {
+            width: min(1180px, calc(100% - 80px));
+            margin: 0 auto;
+        }
+
+
+        .about-eyebrow {
+            margin: 0 0 22px;
+
+            font-family: Arial, Helvetica, sans-serif;
+
+            font-size: 11px;
+            font-weight: 700;
+
+            letter-spacing: 0.25em;
+
+            text-transform: uppercase;
+
+            color: var(--about-charcoal);
+        }
+
+
+        /* =====================================================
+           HERO
+           ===================================================== */
+
+        .about-hero {
+            display: grid;
+
+            grid-template-columns: 40% 60%;
+
+            min-height: 430px;
+
+            border-top: 1px solid var(--about-line);
+            border-bottom: 1px solid var(--about-line);
+        }
+
+
+        .about-hero-copy {
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: center;
+
+            padding: 70px 55px 70px
+                max(40px, calc((100vw - 1180px) / 2));
+
+            background: var(--about-paper);
+        }
+
+
+        .about-hero h1 {
+            margin: 0 0 20px;
+
+            font-family: Georgia, "Times New Roman", serif;
+
+            font-size: clamp(4rem, 7vw, 6.8rem);
+
+            line-height: 0.9;
+
+            font-weight: 400;
+
+            letter-spacing: -0.055em;
+        }
+
+
+        .about-hero-subtitle {
+            max-width: 430px;
+
+            margin: 0;
+
+            font-family: Georgia, "Times New Roman", serif;
+
+            font-size: clamp(1.8rem, 3vw, 3rem);
+
+            line-height: 1.08;
+        }
+
+
+        .about-hero-image {
+            min-height: 430px;
+
+            background-image:
+                url("images/about-hero-bible.jpg");
+
+            background-size: cover;
+
+            background-position: center;
+        }
+
+
+
+        /* =====================================================
+           GENERAL SECTION
+           ===================================================== */
+
+        .about-section {
+            padding: 92px 0;
+
+            border-bottom: 1px solid var(--about-line);
+        }
+
+
+        .about-split {
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 85px;
+
+            align-items: center;
+        }
+
+
+        .about-section h2 {
+            margin: 0 0 25px;
+
+            max-width: 580px;
+
+            font-family: Georgia, "Times New Roman", serif;
+
+            font-size: clamp(2.8rem, 5vw, 4.5rem);
+
+            line-height: 0.98;
+
+            font-weight: 400;
+
+            letter-spacing: -0.045em;
+        }
+
+
+        .about-body {
+            font-family: Georgia, "Times New Roman", serif;
+
+            font-size: 18px;
+
+            line-height: 1.75;
+        }
+
+
+        .about-body p {
+            margin: 0 0 22px;
+        }
+
+
+        .about-body p:last-child {
+            margin-bottom: 0;
+        }
+
+
+        .about-photo {
+            width: 100%;
+
+            aspect-ratio: 4 / 3;
+
+            object-fit: cover;
+
+            display: block;
+        }
+
+
+
+        /* =====================================================
+           WHAT YOU'LL FIND
+           ===================================================== */
+
+        .about-find {
+            padding: 82px 0;
+
+            border-bottom: 1px solid var(--about-line);
+        }
+
+
+        .about-find-grid {
+            display: grid;
+
+            grid-template-columns: 0.9fr 1.1fr;
+
+            gap: 90px;
+
+            align-items: start;
+        }
+
+
+        .about-find h2 {
+            margin: 0;
+
+            font-family: Georgia, "Times New Roman", serif;
+
+            font-size: clamp(3rem, 5vw, 5rem);
+
+            line-height: 0.98;
+
+            font-weight: 400;
+
+            letter-spacing: -0.045em;
+        }
+
+
+        .about-find-intro {
+            margin: 28px 0 0;
+
+            max-width: 480px;
+
+            font-family: Georgia, "Times New Roman", serif;
+
+            font-size: 18px;
+
+            line-height: 1.6;
+        }
+
+
+        .about-links {
+            border-top: 1px solid var(--about-line);
+        }
+
+
+        .about-link {
+            display: grid;
+
+            grid-template-columns: 145px 1fr 25px;
+
+            gap: 25px;
+
+            align-items: center;
+
+            padding: 24px 0;
+
+            border-bottom: 1px solid var(--about-line);
+
+            text-decoration: none;
+
+            color: inherit;
+        }
+
+
+        .about-link-title {
+            font-family: Georgia, "Times New Roman", serif;
+
+            font-size: 26px;
+        }
+
+
+        .about-link-description {
+            font-family: Georgia, "Times New Roman", serif;
+
+            font-size: 15px;
+
+            line-height: 1.5;
+
+            color: var(--about-muted);
+        }
+
+
+        .about-link-arrow {
+            font-size: 20px;
+
+            text-align: right;
+        }
+
+
+
+        /* =====================================================
+           PERSONAL NOTE
+           ===================================================== */
+
+        .about-personal {
+            padding: 92px 0;
+
+            border-bottom: 1px solid var(--about-line);
+        }
+
+
+        .about-personal-grid {
+            display: grid;
+
+            grid-template-columns: 0.85fr 1.15fr;
+
+            gap: 75px;
+
+            align-items: center;
+        }
+
+
+        .about-personal h2 {
+            margin: 0 0 28px;
+
+            font-family: Georgia, "Times New Roman", serif;
+
+            font-size: clamp(2.8rem, 5vw, 4.5rem);
+
+            line-height: 0.98;
+
+            font-weight: 400;
+
+            letter-spacing: -0.045em;
+        }
+
+
+
+        /* =====================================================
+           SCRIPTURE FOUNDATION
+           ===================================================== */
+
+        .about-foundation {
+            position: relative;
+
+            min-height: 370px;
+
+            display: grid;
+
+            place-items: center;
+
+            overflow: hidden;
+
+            background-image:
+                url("images/about-scripture.jpg");
+
+            background-size: cover;
+
+            background-position: center;
+        }
+
+
+        .about-foundation::before {
+            content: "";
+
+            position: absolute;
+
+            inset: 0;
+
+            background:
+                rgba(247, 243, 234, 0.48);
+        }
+
+
+        .about-foundation-content {
+            position: relative;
+
+            z-index: 1;
+
+            width: min(620px, calc(100% - 60px));
+
+            text-align: center;
+        }
+
+
+        .about-foundation blockquote {
+            margin: 0;
+
+            font-family: Georgia, "Times New Roman", serif;
+
+            font-size: clamp(2.2rem, 5vw, 4.2rem);
+
+            line-height: 1.05;
+
+            font-style: italic;
+
+            font-weight: 400;
+        }
+
+
+        .about-foundation-reference {
+            margin-top: 25px;
+
+            font-family: Arial, Helvetica, sans-serif;
+
+            font-size: 11px;
+
+            font-weight: 700;
+
+            letter-spacing: 0.25em;
+
+            text-transform: uppercase;
+        }
+
+
+
+        /* =====================================================
+           INSTAGRAM
+           ===================================================== */
+
+        .about-instagram {
+            padding: 45px 0;
+
+            border-bottom: 1px solid var(--about-line);
+        }
+
+
+        .about-instagram-inner {
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            gap: 30px;
+        }
+
+
+        .about-instagram p {
+            margin: 0;
+
+            font-family: Arial, Helvetica, sans-serif;
+
+            font-size: 12px;
+
+            letter-spacing: 0.08em;
+
+            text-transform: uppercase;
+        }
+
+
+        .about-instagram a {
+            color: inherit;
+
+            text-decoration: none;
+
+            font-family: Arial, Helvetica, sans-serif;
+
+            font-size: 12px;
+
+            letter-spacing: 0.08em;
+
+            text-transform: uppercase;
+        }
+
+
+
+        /* =====================================================
+           TABLET
+           ===================================================== */
+
+        @media (max-width: 850px) {
+
+            .about-container {
+                width: min(
+                    100% - 40px,
+                    700px
+                );
+            }
+
+
+            .about-hero {
+                grid-template-columns: 1fr;
+            }
+
+
+            .about-hero-copy {
+                padding: 65px 20px;
+            }
+
+
+            .about-hero-image {
+                min-height: 320px;
+            }
+
+
+            .about-split,
+            .about-find-grid,
+            .about-personal-grid {
+                grid-template-columns: 1fr;
+
+                gap: 45px;
+            }
+
+
+            .about-section,
+            .about-find,
+            .about-personal {
+                padding: 65px 0;
+            }
+
+
+            .about-link {
+                grid-template-columns:
+                    105px 1fr 20px;
+
+                gap: 15px;
+            }
+
+        }
+
+
+
+        /* =====================================================
+           MOBILE
+           ===================================================== */
+
+        @media (max-width: 560px) {
+
+            .about-container {
+                width: calc(100% - 40px);
+            }
+
+
+            .about-hero h1 {
+                font-size: 4.1rem;
+            }
+
+
+            .about-hero-subtitle {
+                font-size: 1.7rem;
+            }
+
+
+            .about-link {
+                grid-template-columns:
+                    1fr 20px;
+            }
+
+
+            .about-link-description {
+                grid-column: 1 / -1;
+
+                margin-top: -7px;
+            }
+
+
+            .about-instagram-inner {
+                flex-direction: column;
+
+                align-items: flex-start;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+
+<body>
+
+
+
+<!-- =========================================================
+     HEADER
+     ========================================================= -->
+
+<header class="site-header">
+
+    <div class="container">
+
+        <a
+            class="site-logo"
+            href="index.html"
+        >
+            Daily Living in the Word
+        </a>
+
+
+        <nav class="main-nav">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="articles.html">
+                Articles
+            </a>
+
+            <a href="bible.html">
+                Bible
+            </a>
+
+            <a href="theology.html">
+                Theology
+            </a>
+
+            <a href="resources.html">
+                Resources
+            </a>
+
+            <a
+                href="about.html"
+                class="active"
+            >
+                About
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+
+<!-- =========================================================
+     MAIN
+     ========================================================= -->
+
+<main class="about-page">
+
+
+
+<!-- =========================================================
+     HERO
+     ========================================================= -->
+
+<section class="about-hero">
+
+    <div class="about-hero-copy">
+
+        <p class="about-eyebrow">
+            Daily Living in the Word
+        </p>
+
+
+        <h1>
+            About
+        </h1>
+
+
+        <p class="about-hero-subtitle">
+            Rooted in Scripture.<br>
+            Living for Christ.
+        </p>
+
+    </div>
+
+
+    <div class="about-hero-image"></div>
+
+</section>
+
+
+
+<!-- =========================================================
+     WHY DAILY LIVING IN THE WORD
+     ========================================================= -->
+
+<section class="about-section">
+
+    <div class="about-container">
+
+        <div class="about-split">
+
+
+            <div>
+
+                <p class="about-eyebrow">
+                    Why Daily Living in the Word?
+                </p>
+
+
+                <h2>
+                    God's Word is not
+                    meant to remain
+                    on the page.
+                </h2>
+
+
+                <div class="about-body">
+
+                    <p>
+                        Daily Living in the Word exists because God's
+                        Word is not simply something we read and move
+                        on from.
+                    </p>
+
+
+                    <p>
+                        Scripture shapes how we think, how we worship,
+                        how we understand God, how we respond to
+                        suffering, how we understand the church, and
+                        how we live before Christ every day.
+                    </p>
+
+
+                    <p>
+                        This site is a place to slow down, open
+                        Scripture, think carefully about what we
+                        believe, and consider what it means to
+                        actually live in light of what God has said.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <img
+                class="about-photo"
+                src="images/about-scripture-reading.jpg"
+                alt="Open Bible beside a quiet place for Scripture reading"
+            >
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     WHAT YOU'LL FIND HERE
+     ========================================================= -->
+
+<section class="about-find">
+
+    <div class="about-container">
+
+        <div class="about-find-grid">
+
+
+            <div>
+
+                <p class="about-eyebrow">
+                    What You'll Find Here
+                </p>
+
+
+                <h2>
+                    Scripture at
+                    the centre.
+                </h2>
+
+
+                <p class="about-find-intro">
+                    Everything here points back to the Word of God
+                    and to the life we are called to live in Christ.
+                </p>
+
+            </div>
+
+
+
+            <div class="about-links">
+
+
+                <a
+                    class="about-link"
+                    href="articles.html"
+                >
+
+                    <span class="about-link-title">
+                        Articles
+                    </span>
+
+
+                    <span class="about-link-description">
+                        Reflections on Scripture, theology, Christian
+                        living, discipleship, and the life of the church.
+                    </span>
+
+
+                    <span class="about-link-arrow">
+                        →
+                    </span>
+
+                </a>
+
+
+
+                <a
+                    class="about-link"
+                    href="bible.html"
+                >
+
+                    <span class="about-link-title">
+                        Bible
+                    </span>
+
+
+                    <span class="about-link-description">
+                        Reading plans and Bible resources designed to
+                        encourage a consistent life in Scripture.
+                    </span>
+
+
+                    <span class="about-link-arrow">
+                        →
+                    </span>
+
+                </a>
+
+
+
+                <a
+                    class="about-link"
+                    href="theology.html"
+                >
+
+                    <span class="about-link-title">
+                        Theology
+                    </span>
+
+
+                    <span class="about-link-description">
+                        Careful consideration of what Scripture teaches
+                        about God, the church, salvation, and the
+                        Christian life.
+                    </span>
+
+
+                    <span class="about-link-arrow">
+                        →
+                    </span>
+
+                </a>
+
+
+
+                <a
+                    class="about-link"
+                    href="resources.html"
+                >
+
+                    <span class="about-link-title">
+                        Resources
+                    </span>
+
+
+                    <span class="about-link-description">
+                        Reading plans, studies, downloadable material,
+                        and other resources created to help you grow
+                        in grace and truth.
+                    </span>
+
+
+                    <span class="about-link-arrow">
+                        →
+                    </span>
+
+                </a>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     PERSONAL NOTE
+     ========================================================= -->
+
+<section class="about-personal">
+
+    <div class="about-container">
+
+        <div class="about-personal-grid">
+
+
+            <img
+                class="about-photo"
+                src="images/about-personal.jpg"
+                alt="Books and a quiet reading space"
+            >
+
+
+
+            <div>
+
+                <p class="about-eyebrow">
+                    A Personal Note
+                </p>
+
+
+                <h2>
+                    A note from the person
+                    behind Daily Living
+                    in the Word.
+                </h2>
+
+
+                <div class="about-body">
+
+                    <p>
+                        Daily Living in the Word began from a simple
+                        desire: to keep growing in God's Word and to
+                        encourage others to do the same.
+                    </p>
+
+
+                    <p>
+                        I'm not writing from a place of having
+                        everything figured out. I'm writing as someone
+                        who is still learning, still being corrected
+                        by Scripture, still growing in grace, and still
+                        learning what it means to follow Christ faithfully.
+                    </p>
+
+
+                    <p>
+                        Some of what is shared here comes from Bible
+                        study and theological reading. Some comes from
+                        the ordinary joys, disappointments, questions,
+                        and struggles that come with being a Christian.
+                    </p>
+
+
+                    <p>
+                        My hope is that whatever you find here will
+                        ultimately send you back to Scripture.
+                        And beyond Scripture, to Christ.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     SCRIPTURE FOUNDATION
+     ========================================================= -->
+
+<section class="about-foundation">
+
+    <div class="about-foundation-content">
+
+        <p class="about-eyebrow">
+            Our Foundation
+        </p>
+
+
+        <blockquote>
+            “Your word is truth.”
+        </blockquote>
+
+
+        <p class="about-foundation-reference">
+            John 17:17
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     INSTAGRAM
+     ========================================================= -->
+
+<section class="about-instagram">
+
+    <div class="about-container">
+
+        <div class="about-instagram-inner">
+
+            <p>
+                Daily Living in the Word ·
+                @dailylivingintheword
+            </p>
+
+
+            <a
+                href="https://www.instagram.com/dailylivingintheword/"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Follow on Instagram →
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+</main>
+
+
+
+<!-- =========================================================
+     FOOTER
+     ========================================================= -->
+
+<footer class="site-footer">
+
+    <div class="container">
+
+        <p>
+            “Let the word of Christ dwell in you richly.”
+            — Colossians 3:16
+        </p>
+
+
+        <p class="footer-brand">
+            Daily Living in the Word
+        </p>
+
+
+        <p>
+            Biblical truth for everyday life.
+        </p>
+
+
+        <p class="copyright">
+            © 2026 Daily Living in the Word
+        </p>
+
+    </div>
+
+</footer>
+
+
+
+</body>
+
+</html>

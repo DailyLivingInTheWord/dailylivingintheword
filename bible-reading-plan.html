@@ -1,0 +1,1795 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>365-Day Bible Reading Plan | Daily Living in the Word</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: #f7f5ef;
+            color: #292723;
+            font-family: Arial, sans-serif;
+        }
+
+        .reading-page {
+            width: 92%;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 50px 0 70px;
+        }
+
+        .site-header {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .site-title {
+            font-family: Georgia, serif;
+            font-size: 2rem;
+            margin: 0 0 8px;
+            font-weight: normal;
+        }
+
+        .site-subtitle {
+            color: #81796d;
+            font-size: 0.85rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+        }
+
+        .main-nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 22px;
+            margin-top: 28px;
+        }
+
+        .main-nav a {
+            color: #292723;
+            text-decoration: none;
+            font-size: 0.78rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        .main-nav a:hover,
+        .main-nav a.active {
+            color: #81796d;
+        }
+
+        .page-intro {
+            text-align: center;
+            max-width: 720px;
+            margin: 0 auto 45px;
+        }
+
+        .page-intro h1 {
+            font-family: Georgia, serif;
+            font-size: 2.5rem;
+            font-weight: normal;
+            margin: 0 0 18px;
+        }
+
+        .page-intro p {
+            font-family: Georgia, serif;
+            color: #5f5a52;
+            font-size: 1.08rem;
+            line-height: 1.8;
+            margin: 0;
+        }
+
+
+        .reading-plan-notice {
+            max-width: 760px;
+            margin: 35px auto 50px;
+            padding: 20px 24px;
+            border-top: 1px solid #d9d3c8;
+            border-bottom: 1px solid #d9d3c8;
+            text-align: center;
+        }
+
+        .reading-plan-notice strong {
+            display: block;
+            margin-bottom: 8px;
+            font-family: Arial, sans-serif;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+        }
+
+        .reading-plan-notice p {
+            margin: 0;
+            font-family: Georgia, serif;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: #6f6a62;
+        }
+
+        .progress-section {
+            background: #eeebe3;
+            padding: 24px;
+            margin-bottom: 35px;
+        }
+
+        .progress-header {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+            align-items: center;
+            margin-bottom: 12px;
+            font-size: 0.85rem;
+        }
+
+        .progress-label {
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: #81796d;
+        }
+
+        .progress-count {
+            color: #292723;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background: #d9d4ca;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            width: 0%;
+            background: #81796d;
+            transition: width 0.3s ease;
+        }
+
+        .current-day {
+            background: #fffdf8;
+            border: 1px solid #ded9cf;
+            padding: 35px;
+            margin-bottom: 55px;
+        }
+
+        .section-label {
+            font-size: 0.75rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: #81796d;
+            margin-bottom: 12px;
+        }
+
+        .current-day h2 {
+            font-family: Georgia, serif;
+            font-size: 2rem;
+            font-weight: normal;
+            margin: 0 0 12px;
+        }
+
+        .current-reading {
+            font-family: Georgia, serif;
+            font-size: 1.25rem;
+            line-height: 1.6;
+            margin: 0 0 8px;
+        }
+
+        .chapter-count {
+            color: #81796d;
+            font-size: 0.85rem;
+            margin-bottom: 25px;
+        }
+
+        .current-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            align-items: center;
+        }
+
+        button,
+        select {
+            font-family: Arial, sans-serif;
+        }
+
+        .primary-button,
+        .secondary-button {
+            border: none;
+            padding: 12px 18px;
+            cursor: pointer;
+            font-size: 0.78rem;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            transition: opacity 0.2s ease;
+        }
+
+        .primary-button {
+            background: #292723;
+            color: #fffdf8;
+        }
+
+        .primary-button.completed {
+            background: #81796d;
+        }
+
+        .secondary-button {
+            background: #eeebe3;
+            color: #292723;
+        }
+
+        .primary-button:hover,
+        .secondary-button:hover {
+            opacity: 0.75;
+        }
+
+        .day-selector {
+            margin-top: 20px;
+        }
+
+        .day-selector label {
+            display: block;
+            font-size: 0.75rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: #81796d;
+            margin-bottom: 8px;
+        }
+
+        .day-selector select {
+            width: 100%;
+            max-width: 300px;
+            padding: 11px;
+            border: 1px solid #d5d0c6;
+            background: #fffdf8;
+            color: #292723;
+        }
+
+        .plan-section h2 {
+            font-family: Georgia, serif;
+            font-size: 2rem;
+            font-weight: normal;
+            margin: 0 0 10px;
+        }
+
+        .plan-intro {
+            color: #81796d;
+            margin: 0 0 25px;
+            line-height: 1.6;
+        }
+
+        .page-status {
+            font-size: 0.8rem;
+            color: #81796d;
+            margin-bottom: 18px;
+        }
+
+        .day-list {
+            display: grid;
+            gap: 10px;
+        }
+
+        .day-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 16px 18px;
+            background: #fffdf8;
+            border: 1px solid #e1ddd4;
+            transition: background 0.2s ease;
+        }
+
+        .day-item.current {
+            border-color: #81796d;
+        }
+
+        .day-item.completed {
+            background: #eeebe3;
+        }
+
+        .day-check {
+            width: 20px;
+            height: 20px;
+            flex: 0 0 20px;
+            accent-color: #81796d;
+            cursor: pointer;
+        }
+
+        .day-info {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .day-number {
+            font-size: 0.72rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: #81796d;
+            margin-bottom: 4px;
+        }
+
+        .day-reading {
+            font-family: Georgia, serif;
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+
+        .current-marker {
+            font-size: 0.68rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: #81796d;
+            white-space: nowrap;
+        }
+
+        .plan-pagination {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-top: 30px;
+        }
+
+        .pagination-button {
+            min-width: 38px;
+            height: 38px;
+            padding: 0 10px;
+            border: 1px solid #d5d0c6;
+            background: #fffdf8;
+            color: #292723;
+            cursor: pointer;
+            font-size: 0.78rem;
+        }
+
+        .pagination-button:hover {
+            background: #eeebe3;
+        }
+
+        .pagination-button.active {
+            background: #292723;
+            color: #fffdf8;
+            border-color: #292723;
+        }
+
+        .pagination-button:disabled {
+            opacity: 0.4;
+            cursor: default;
+        }
+
+        .pagination-ellipsis {
+            padding: 0 5px;
+            color: #81796d;
+        }
+
+        .scripture-box {
+            margin-top: 60px;
+            padding: 35px;
+            background: #eeebe3;
+            text-align: center;
+        }
+
+        .scripture-box p {
+            font-family: Georgia, serif;
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin: 0 0 12px;
+        }
+
+        .scripture-reference {
+            color: #81796d;
+            font-size: 0.78rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 1px solid #ddd8ce;
+            color: #81796d;
+            font-size: 0.8rem;
+        }
+
+        @media (max-width: 700px) {
+            .reading-page {
+                padding-top: 35px;
+            }
+
+            .page-intro h1 {
+                font-size: 2rem;
+            }
+
+            .current-day {
+                padding: 25px;
+            }
+
+            .current-day h2 {
+                font-size: 1.6rem;
+            }
+
+            .current-reading {
+                font-size: 1.1rem;
+            }
+
+            .current-actions {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .current-actions button {
+                width: 100%;
+            }
+
+            .day-item {
+                padding: 14px;
+            }
+
+            .current-marker {
+                display: none;
+            }
+
+            .pagination-button {
+                min-width: 34px;
+                height: 34px;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .main-nav {
+                gap: 14px;
+            }
+
+            .main-nav a {
+                font-size: 0.7rem;
+            }
+
+            .progress-section {
+                padding: 18px;
+            }
+
+            .current-day {
+                padding: 20px;
+            }
+
+            .scripture-box {
+                padding: 25px 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="reading-page">
+
+    <header class="site-header">
+
+        <div class="site-title">
+            Daily Living in the Word
+        </div>
+
+        <div class="site-subtitle">
+            Scripture • Theology • Christian Living
+        </div>
+
+        <nav class="main-nav" aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="articles.html">Articles</a>
+            <a href="bible.html" class="active">Bible</a>
+            <a href="theology.html">Theology</a>
+            <a href="resources.html">Resources</a>
+            <a href="about.html">About</a>
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <section class="page-intro">
+
+            <h1>365-Day Bible Reading Plan</h1>
+
+            <p>
+                A year-long journey through the Bible, following a broad
+                chronological framework while giving you a manageable reading
+                for each day.
+            </p>
+
+        </section>
+
+
+        <div class="reading-plan-notice">
+            <strong>This reading plan is being improved.</strong>
+            <p>
+                For now, completed readings are saved only on the browser you are using
+                and will not carry over to another browser or device.
+            </p>
+        </div>
+
+        <section class="progress-section">
+
+            <div class="progress-header">
+
+                <span class="progress-label">
+                    Your Progress
+                </span>
+
+                <span class="progress-count" id="progressCount">
+                    0 of 365 days completed
+                </span>
+
+            </div>
+
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+
+        </section>
+
+
+        <section class="current-day" id="currentDaySection">
+
+            <div class="section-label">
+                Today's Reading
+            </div>
+
+            <h2 id="currentDayTitle">
+                Day 1
+            </h2>
+
+            <p class="current-reading" id="currentReading">
+                Genesis 1–3
+            </p>
+
+            <div class="chapter-count" id="currentChapterCount">
+                3 chapters
+            </div>
+
+            <div class="current-actions">
+
+                <button
+                    type="button"
+                    class="primary-button"
+                    id="completeButton">
+                    Mark Day Complete
+                </button>
+
+                <button
+                    type="button"
+                    class="secondary-button"
+                    id="previousButton">
+                    Previous Day
+                </button>
+
+                <button
+                    type="button"
+                    class="secondary-button"
+                    id="nextButton">
+                    Next Day
+                </button>
+
+            </div>
+
+
+            <div class="day-selector">
+
+                <label for="daySelect">
+                    Jump to a day
+                </label>
+
+                <select id="daySelect">
+                </select>
+
+            </div>
+
+        </section>
+
+
+        <section class="plan-section">
+
+            <h2>All 365 Days</h2>
+
+            <p class="plan-intro">
+                Work through the plan one day at a time. Your completed days
+                are saved in this browser.
+            </p>
+
+            <div class="page-status" id="pageStatus">
+                Days 1–25 of 365
+            </div>
+
+            <div class="day-list" id="dayList">
+            </div>
+
+            <nav
+                class="plan-pagination"
+                id="pagination"
+                aria-label="Reading plan pagination">
+            </nav>
+
+        </section>
+
+
+        <section class="scripture-box">
+
+            <p>
+                “Your word is a lamp to my feet and a light to my path.”
+            </p>
+
+            <div class="scripture-reference">
+                Psalm 119:105
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <div>
+            Daily Living in the Word
+        </div>
+
+        <div style="margin-top: 8px;">
+            Daily living. In the Word.
+        </div>
+
+    </footer>
+
+</div>
+
+
+<script>
+
+    /*
+     * ============================================================
+     * 365-DAY BIBLE READING PLAN
+     * ============================================================
+     *
+     * The plan contains all 66 books and all 1,189 chapters.
+     * The chapters are distributed across 365 days.
+     *
+     * The ordering is a broad chronological framework rather
+     * than a claim that every book is placed at its exact
+     * historical date.
+     * ============================================================
+     */
+
+
+    const books = [
+
+        ["Genesis", 50],
+        ["Job", 42],
+        ["Exodus", 40],
+        ["Leviticus", 27],
+        ["Numbers", 36],
+        ["Deuteronomy", 34],
+        ["Joshua", 24],
+        ["Judges", 21],
+        ["Ruth", 4],
+        ["1 Samuel", 31],
+        ["2 Samuel", 24],
+        ["1 Chronicles", 29],
+        ["Psalms", 150],
+        ["1 Kings", 22],
+        ["2 Chronicles", 36],
+        ["Proverbs", 31],
+        ["Ecclesiastes", 12],
+        ["Song of Solomon", 8],
+        ["Obadiah", 1],
+        ["Joel", 3],
+        ["Jonah", 4],
+        ["Amos", 9],
+        ["Hosea", 14],
+        ["Isaiah", 66],
+        ["Micah", 7],
+        ["Nahum", 3],
+        ["Zephaniah", 3],
+        ["Habakkuk", 3],
+        ["2 Kings", 25],
+        ["Jeremiah", 52],
+        ["Lamentations", 5],
+        ["Ezekiel", 48],
+        ["Daniel", 12],
+        ["Ezra", 10],
+        ["Esther", 10],
+        ["Nehemiah", 13],
+        ["Haggai", 2],
+        ["Zechariah", 14],
+        ["Malachi", 4],
+
+        ["Matthew", 28],
+        ["Mark", 16],
+        ["Luke", 24],
+        ["John", 21],
+        ["Acts", 28],
+        ["James", 5],
+        ["Galatians", 6],
+        ["1 Thessalonians", 5],
+        ["2 Thessalonians", 3],
+        ["1 Corinthians", 16],
+        ["2 Corinthians", 13],
+        ["Romans", 16],
+        ["Ephesians", 6],
+        ["Philippians", 4],
+        ["Colossians", 4],
+        ["Philemon", 1],
+        ["1 Timothy", 6],
+        ["Titus", 3],
+        ["2 Timothy", 4],
+        ["Hebrews", 13],
+        ["1 Peter", 5],
+        ["2 Peter", 3],
+        ["Jude", 1],
+        ["1 John", 5],
+        ["2 John", 1],
+        ["3 John", 1],
+        ["Revelation", 22]
+
+    ];
+
+
+    const TOTAL_DAYS = 365;
+
+    const DAYS_PER_PAGE = 25;
+
+    const TOTAL_CHAPTERS = books.reduce(
+        (total, book) => total + book[1],
+        0
+    );
+
+    const TOTAL_PAGES = Math.ceil(
+        TOTAL_DAYS / DAYS_PER_PAGE
+    );
+
+
+    /*
+     * ============================================================
+     * STORAGE
+     * ============================================================
+     */
+
+    const COMPLETED_STORAGE_KEY =
+        "dlitw-365-reading-plan";
+
+    const CURRENT_DAY_STORAGE_KEY =
+        "dlitw-current-reading-day";
+
+
+    let completedDays =
+        JSON.parse(
+            localStorage.getItem(COMPLETED_STORAGE_KEY) || "[]"
+        );
+
+    let currentDay =
+        parseInt(
+            localStorage.getItem(CURRENT_DAY_STORAGE_KEY) || "1",
+            10
+        );
+
+    let currentListPage = 1;
+
+
+    /*
+     * Make sure current day is valid.
+     */
+
+    if (
+        isNaN(currentDay) ||
+        currentDay < 1 ||
+        currentDay > TOTAL_DAYS
+    ) {
+        currentDay = 1;
+    }
+
+
+    /*
+     * ============================================================
+     * BUILD COMPLETE CHAPTER LIST
+     * ============================================================
+     */
+
+    function buildChapterList() {
+
+        const chapters = [];
+
+        books.forEach(book => {
+
+            const bookName = book[0];
+            const chapterCount = book[1];
+
+            for (
+                let chapter = 1;
+                chapter <= chapterCount;
+                chapter++
+            ) {
+
+                chapters.push({
+                    book: bookName,
+                    chapter: chapter
+                });
+
+            }
+
+        });
+
+        return chapters;
+    }
+
+
+    const chapters = buildChapterList();
+
+
+    /*
+     * ============================================================
+     * BUILD 365-DAY PLAN
+     * ============================================================
+     */
+
+    function buildReadingPlan() {
+
+        const plan = [];
+
+        let previousTarget = 0;
+
+        for (
+            let day = 1;
+            day <= TOTAL_DAYS;
+            day++
+        ) {
+
+            const target = Math.round(
+                day * TOTAL_CHAPTERS / TOTAL_DAYS
+            );
+
+            const dayChapters =
+                chapters.slice(
+                    previousTarget,
+                    target
+                );
+
+            plan.push({
+                day: day,
+                chapters: dayChapters
+            });
+
+            previousTarget = target;
+        }
+
+        return plan;
+    }
+
+
+    const readingPlan =
+        buildReadingPlan();
+
+
+    /*
+     * ============================================================
+     * FORMAT READING
+     * ============================================================
+     */
+
+    function formatReading(dayData) {
+
+        const dayChapters = dayData.chapters;
+
+        if (!dayChapters.length) {
+            return "No reading assigned";
+        }
+
+
+        const groups = [];
+
+        let currentBook =
+            dayChapters[0].book;
+
+        let startChapter =
+            dayChapters[0].chapter;
+
+        let previousChapter =
+            dayChapters[0].chapter;
+
+
+        for (
+            let i = 1;
+            i < dayChapters.length;
+            i++
+        ) {
+
+            const chapter =
+                dayChapters[i];
+
+
+            if (
+                chapter.book === currentBook &&
+                chapter.chapter === previousChapter + 1
+            ) {
+
+                previousChapter =
+                    chapter.chapter;
+
+            } else {
+
+                groups.push({
+                    book: currentBook,
+                    start: startChapter,
+                    end: previousChapter
+                });
+
+                currentBook =
+                    chapter.book;
+
+                startChapter =
+                    chapter.chapter;
+
+                previousChapter =
+                    chapter.chapter;
+            }
+
+        }
+
+
+        groups.push({
+            book: currentBook,
+            start: startChapter,
+            end: previousChapter
+        });
+
+
+        return groups
+            .map(group => {
+
+                if (
+                    group.start === group.end
+                ) {
+
+                    return `${group.book} ${group.start}`;
+
+                }
+
+                return `${group.book} ${group.start}–${group.end}`;
+
+            })
+            .join("; ");
+    }
+
+
+    /*
+     * ============================================================
+     * COMPLETION HELPERS
+     * ============================================================
+     */
+
+    function isCompleted(day) {
+
+        return completedDays.includes(day);
+
+    }
+
+
+    function saveCompletedDays() {
+
+        localStorage.setItem(
+            COMPLETED_STORAGE_KEY,
+            JSON.stringify(completedDays)
+        );
+
+    }
+
+
+    function saveCurrentDay() {
+
+        localStorage.setItem(
+            CURRENT_DAY_STORAGE_KEY,
+            String(currentDay)
+        );
+
+    }
+
+
+    /*
+     * ============================================================
+     * PROGRESS
+     * ============================================================
+     */
+
+    function updateProgress() {
+
+        const completedCount =
+            completedDays.length;
+
+        const percentage =
+            (completedCount / TOTAL_DAYS) * 100;
+
+
+        document.getElementById(
+            "progressCount"
+        ).textContent =
+            `${completedCount} of ${TOTAL_DAYS} days completed`;
+
+
+        document.getElementById(
+            "progressFill"
+        ).style.width =
+            `${percentage}%`;
+
+    }
+
+
+    /*
+     * ============================================================
+     * CURRENT DAY
+     * ============================================================
+     */
+
+    function showCurrentDay() {
+
+        const dayData =
+            readingPlan[currentDay - 1];
+
+
+        document.getElementById(
+            "currentDayTitle"
+        ).textContent =
+            `Day ${currentDay}`;
+
+
+        document.getElementById(
+            "currentReading"
+        ).textContent =
+            formatReading(dayData);
+
+
+        const chapterCount =
+            dayData.chapters.length;
+
+
+        document.getElementById(
+            "currentChapterCount"
+        ).textContent =
+            chapterCount === 1
+                ? "1 chapter"
+                : `${chapterCount} chapters`;
+
+
+        const completeButton =
+            document.getElementById(
+                "completeButton"
+            );
+
+
+        if (isCompleted(currentDay)) {
+
+            completeButton.textContent =
+                "Day Completed ✓";
+
+            completeButton.classList.add(
+                "completed"
+            );
+
+        } else {
+
+            completeButton.textContent =
+                "Mark Day Complete";
+
+            completeButton.classList.remove(
+                "completed"
+            );
+
+        }
+
+
+        document.getElementById(
+            "previousButton"
+        ).disabled =
+            currentDay === 1;
+
+
+        document.getElementById(
+            "nextButton"
+        ).disabled =
+            currentDay === TOTAL_DAYS;
+
+
+        document.getElementById(
+            "daySelect"
+        ).value =
+            String(currentDay);
+
+    }
+
+
+    /*
+     * ============================================================
+     * DAY SELECTOR
+     * ============================================================
+     */
+
+    function buildDaySelector() {
+
+        const select =
+            document.getElementById(
+                "daySelect"
+            );
+
+        select.innerHTML = "";
+
+
+        readingPlan.forEach(dayData => {
+
+            const option =
+                document.createElement("option");
+
+            option.value =
+                String(dayData.day);
+
+            option.textContent =
+                `Day ${dayData.day} — ${formatReading(dayData)}`;
+
+            select.appendChild(option);
+
+        });
+
+    }
+
+
+    /*
+     * ============================================================
+     * PAGINATION
+     * ============================================================
+     */
+
+    function getPageStart() {
+
+        return (
+            (currentListPage - 1) *
+            DAYS_PER_PAGE
+        ) + 1;
+
+    }
+
+
+    function getPageEnd() {
+
+        return Math.min(
+            currentListPage * DAYS_PER_PAGE,
+            TOTAL_DAYS
+        );
+
+    }
+
+
+    /*
+     * Render the visible days only.
+     */
+
+    function buildAllDays() {
+
+        const list =
+            document.getElementById(
+                "dayList"
+            );
+
+        list.innerHTML = "";
+
+
+        const startDay =
+            getPageStart();
+
+        const endDay =
+            getPageEnd();
+
+
+        for (
+            let day = startDay;
+            day <= endDay;
+            day++
+        ) {
+
+            const dayData =
+                readingPlan[day - 1];
+
+
+            const item =
+                document.createElement("div");
+
+            item.className =
+                "day-item";
+
+
+            if (isCompleted(day)) {
+
+                item.classList.add(
+                    "completed"
+                );
+
+            }
+
+
+            if (day === currentDay) {
+
+                item.classList.add(
+                    "current"
+                );
+
+            }
+
+
+            const checkbox =
+                document.createElement("input");
+
+            checkbox.type =
+                "checkbox";
+
+            checkbox.className =
+                "day-check";
+
+            checkbox.checked =
+                isCompleted(day);
+
+            checkbox.setAttribute(
+                "aria-label",
+                `Mark Day ${day} complete`
+            );
+
+
+            checkbox.addEventListener(
+                "change",
+                function () {
+
+                    toggleDayCompletion(day);
+
+                }
+            );
+
+
+            const info =
+                document.createElement("div");
+
+            info.className =
+                "day-info";
+
+
+            const number =
+                document.createElement("div");
+
+            number.className =
+                "day-number";
+
+            number.textContent =
+                `Day ${day}`;
+
+
+            const reading =
+                document.createElement("div");
+
+            reading.className =
+                "day-reading";
+
+            reading.textContent =
+                formatReading(dayData);
+
+
+            info.appendChild(number);
+
+            info.appendChild(reading);
+
+
+            item.appendChild(checkbox);
+
+            item.appendChild(info);
+
+
+            if (day === currentDay) {
+
+                const marker =
+                    document.createElement("div");
+
+                marker.className =
+                    "current-marker";
+
+                marker.textContent =
+                    "Current Day";
+
+                item.appendChild(marker);
+
+            }
+
+
+            list.appendChild(item);
+
+        }
+
+
+        document.getElementById(
+            "pageStatus"
+        ).textContent =
+            `Days ${startDay}–${endDay} of ${TOTAL_DAYS}`;
+
+
+        buildPagination();
+
+    }
+
+
+    /*
+     * ============================================================
+     * PAGINATION CONTROLS
+     * ============================================================
+     */
+
+    function buildPagination() {
+
+        const pagination =
+            document.getElementById(
+                "pagination"
+            );
+
+        pagination.innerHTML = "";
+
+
+        /*
+         * Previous button
+         */
+
+        const previous =
+            document.createElement("button");
+
+        previous.type =
+            "button";
+
+        previous.className =
+            "pagination-button";
+
+        previous.textContent =
+            "Previous";
+
+        previous.setAttribute(
+            "aria-label",
+            "Previous page"
+        );
+
+        previous.disabled =
+            currentListPage === 1;
+
+
+        previous.addEventListener(
+            "click",
+            function () {
+
+                if (
+                    currentListPage > 1
+                ) {
+
+                    currentListPage--;
+
+                    buildAllDays();
+
+                }
+
+            }
+        );
+
+
+        pagination.appendChild(previous);
+
+
+        /*
+         * Page numbers
+         */
+
+        const pages =
+            getPaginationPages();
+
+
+        pages.forEach(page => {
+
+            if (page === "...") {
+
+                const ellipsis =
+                    document.createElement("span");
+
+                ellipsis.className =
+                    "pagination-ellipsis";
+
+                ellipsis.textContent =
+                    "…";
+
+                pagination.appendChild(
+                    ellipsis
+                );
+
+                return;
+            }
+
+
+            const button =
+                document.createElement("button");
+
+            button.type =
+                "button";
+
+            button.className =
+                "pagination-button";
+
+            button.textContent =
+                String(page);
+
+            button.setAttribute(
+                "aria-label",
+                `Page ${page}`
+            );
+
+
+            if (
+                page === currentListPage
+            ) {
+
+                button.classList.add(
+                    "active"
+                );
+
+                button.setAttribute(
+                    "aria-current",
+                    "page"
+                );
+
+            }
+
+
+            button.addEventListener(
+                "click",
+                function () {
+
+                    currentListPage =
+                        page;
+
+                    buildAllDays();
+
+                }
+            );
+
+
+            pagination.appendChild(
+                button
+            );
+
+        });
+
+
+        /*
+         * Next button
+         */
+
+        const next =
+            document.createElement("button");
+
+        next.type =
+            "button";
+
+        next.className =
+            "pagination-button";
+
+        next.textContent =
+            "Next";
+
+        next.setAttribute(
+            "aria-label",
+            "Next page"
+        );
+
+        next.disabled =
+            currentListPage === TOTAL_PAGES;
+
+
+        next.addEventListener(
+            "click",
+            function () {
+
+                if (
+                    currentListPage <
+                    TOTAL_PAGES
+                ) {
+
+                    currentListPage++;
+
+                    buildAllDays();
+
+                }
+
+            }
+        );
+
+
+        pagination.appendChild(next);
+
+    }
+
+
+    /*
+     * Creates a compact pagination display.
+     *
+     * Example:
+     *
+     * Previous
+     * 1 2 3 … 15
+     * Next
+     *
+     * The current page and nearby pages remain visible.
+     */
+
+    function getPaginationPages() {
+
+        const pages = [];
+
+
+        if (TOTAL_PAGES <= 7) {
+
+            for (
+                let page = 1;
+                page <= TOTAL_PAGES;
+                page++
+            ) {
+
+                pages.push(page);
+
+            }
+
+            return pages;
+
+        }
+
+
+        pages.push(1);
+
+
+        if (currentListPage > 4) {
+
+            pages.push("...");
+
+        }
+
+
+        const start =
+            Math.max(
+                2,
+                currentListPage - 1
+            );
+
+        const end =
+            Math.min(
+                TOTAL_PAGES - 1,
+                currentListPage + 1
+            );
+
+
+        for (
+            let page = start;
+            page <= end;
+            page++
+        ) {
+
+            pages.push(page);
+
+        }
+
+
+        if (
+            currentListPage <
+            TOTAL_PAGES - 3
+        ) {
+
+            pages.push("...");
+
+        }
+
+
+        pages.push(TOTAL_PAGES);
+
+
+        return pages;
+
+    }
+
+
+    /*
+     * ============================================================
+     * TOGGLE COMPLETION
+     * ============================================================
+     */
+
+    function toggleDayCompletion(day) {
+
+        const index =
+            completedDays.indexOf(day);
+
+
+        if (index === -1) {
+
+            completedDays.push(day);
+
+        } else {
+
+            completedDays.splice(
+                index,
+                1
+            );
+
+        }
+
+
+        completedDays =
+            [...new Set(completedDays)]
+                .sort(
+                    (a, b) => a - b
+                );
+
+
+        saveCompletedDays();
+
+        updateProgress();
+
+
+        /*
+         * If the current day was just completed,
+         * automatically move to the next day.
+         */
+
+        if (
+            day === currentDay &&
+            isCompleted(day) &&
+            currentDay < TOTAL_DAYS
+        ) {
+
+            currentDay++;
+
+            saveCurrentDay();
+
+        }
+
+
+        showCurrentDay();
+
+        /*
+         * Rebuild the same pagination page.
+         * This means ticking a day does not suddenly
+         * move the user to another page.
+         */
+
+        buildAllDays();
+
+    }
+
+
+    /*
+     * ============================================================
+     * CURRENT DAY NAVIGATION
+     * ============================================================
+     */
+
+    document
+        .getElementById("previousButton")
+        .addEventListener(
+            "click",
+            function () {
+
+                if (currentDay > 1) {
+
+                    currentDay--;
+
+                    saveCurrentDay();
+
+                    showCurrentDay();
+
+                    buildAllDays();
+
+                }
+
+            }
+        );
+
+
+    document
+        .getElementById("nextButton")
+        .addEventListener(
+            "click",
+            function () {
+
+                if (
+                    currentDay <
+                    TOTAL_DAYS
+                ) {
+
+                    currentDay++;
+
+                    saveCurrentDay();
+
+                    showCurrentDay();
+
+                    buildAllDays();
+
+                }
+
+            }
+        );
+
+
+    /*
+     * ============================================================
+     * COMPLETE CURRENT DAY
+     * ============================================================
+     */
+
+    document
+        .getElementById("completeButton")
+        .addEventListener(
+            "click",
+            function () {
+
+                toggleDayCompletion(
+                    currentDay
+                );
+
+            }
+        );
+
+
+    /*
+     * ============================================================
+     * DAY SELECTOR
+     * ============================================================
+     */
+
+    document
+        .getElementById("daySelect")
+        .addEventListener(
+            "change",
+            function () {
+
+                currentDay =
+                    parseInt(
+                        this.value,
+                        10
+                    );
+
+
+                saveCurrentDay();
+
+                showCurrentDay();
+
+                buildAllDays();
+
+            }
+        );
+
+
+    /*
+     * ============================================================
+     * INITIALISE
+     * ============================================================
+     */
+
+    buildDaySelector();
+
+    updateProgress();
+
+    showCurrentDay();
+
+    buildAllDays();
+
+</script>
+
+</body>
+</html>

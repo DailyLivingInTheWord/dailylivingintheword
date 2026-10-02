@@ -1,0 +1,1256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Resources from Daily Living in the Word — Bible reading plans, studies, printable resources, and recommended reading."
+    >
+
+    <title>Resources | Daily Living in the Word</title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+    <style>
+
+        :root {
+            --resources-ivory: #f5f1e8;
+            --resources-paper: #faf8f2;
+            --resources-charcoal: #292724;
+            --resources-muted: #6f6a62;
+            --resources-line: #d9d3c8;
+        }
+
+
+        body {
+            background: var(--resources-ivory);
+            color: var(--resources-charcoal);
+        }
+
+
+        .resources-page {
+            overflow: hidden;
+        }
+
+
+        .resources-container {
+            width: min(1180px, calc(100% - 80px));
+            margin: 0 auto;
+        }
+
+
+        .resources-eyebrow {
+            margin: 0 0 22px;
+
+            font-family: Arial, Helvetica, sans-serif;
+
+            font-size: 11px;
+            font-weight: 700;
+
+            letter-spacing: 0.25em;
+
+            text-transform: uppercase;
+        }
+
+
+
+        /* =====================================================
+           HERO
+           ===================================================== */
+
+        .resources-hero {
+            display: grid;
+
+            grid-template-columns: 40% 60%;
+
+            min-height: 430px;
+
+            border-top: 1px solid var(--resources-line);
+            border-bottom: 1px solid var(--resources-line);
+        }
+
+
+        .resources-hero-copy {
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: center;
+
+            padding: 70px 55px 70px
+                max(40px, calc((100vw - 1180px) / 2));
+
+            background: var(--resources-paper);
+        }
+
+
+        .resources-hero h1 {
+            margin: 0 0 22px;
+
+            font-family: Georgia, "Times New Roman", serif;
+
+            font-size: clamp(4rem, 7vw, 6.5rem);
+
+            line-height: 0.9;
+
+            font-weight: 400;
+
+            letter-spacing: -0.055em;
+        }
+
+
+        .resources-hero-subtitle {
+            max-width: 470px;
+
+            margin: 0;
+
+            font-family: Georgia, "Times New Roman", serif;
+
+            font-size: clamp(1.8rem, 3vw, 3rem);
+
+            line-height: 1.08;
+        }
+
+
+        .resources-hero-image {
+            min-height: 430px;
+
+            background-image:
+                url("images/bible-study.png");
+
+            background-size: cover;
+
+            background-position: center;
+        }
+
+
+
+        /* =====================================================
+           INTRO
+           ===================================================== */
+
+        .resources-intro {
+            padding: 82px 0;
+
+            border-bottom: 1px solid var(--resources-line);
+        }
+
+
+        .resources-intro-grid {
+            display: grid;
+
+            grid-template-columns: 0.9fr 1.1fr;
+
+            gap: 90px;
+
+            align-items: start;
+        }
+
+
+        .resources-intro h2 {
+            margin: 0;
+
+            font-family: Georgia, "Times New Roman", serif;
+
+            font-size: clamp(3rem, 5vw, 5rem);
+
+            line-height: 0.98;
+
+            font-weight: 400;
+
+            letter-spacing: -0.045em;
+        }
+
+
+        .resources-body {
+            font-family: Georgia, "Times New Roman", serif;
+
+            font-size: 18px;
+
+            line-height: 1.75;
+        }
+
+
+        .resources-body p {
+            margin: 0 0 22px;
+        }
+
+
+        .resources-body p:last-child {
+            margin-bottom: 0;
+        }
+
+
+
+        /* =====================================================
+           RESOURCE LIBRARY
+           ===================================================== */
+
+        .resources-library {
+            padding: 82px 0;
+
+            border-bottom: 1px solid var(--resources-line);
+        }
+
+
+        .resources-section-heading {
+            display: grid;
+
+            grid-template-columns: 1fr 0.75fr;
+
+            gap: 70px;
+
+            align-items: end;
+
+            margin-bottom: 50px;
+        }
+
+
+        .resources-section-heading h2 {
+            margin: 0;
+
+            font-family: Georgia, "Times New Roman", serif;
+
+            font-size: clamp(3rem, 5vw, 5rem);
+
+            line-height: 0.98;
+
+            font-weight: 400;
+
+            letter-spacing: -0.045em;
+        }
+
+
+        .resources-section-heading p:last-child {
+            margin: 0;
+
+            padding-left: 35px;
+
+            border-left: 1px solid var(--resources-line);
+
+            font-family: Georgia, "Times New Roman", serif;
+
+            font-size: 18px;
+
+            line-height: 1.6;
+        }
+
+
+        .resources-list {
+            border-top: 1px solid var(--resources-line);
+        }
+
+
+        .resource-item {
+            display: grid;
+
+            grid-template-columns: 220px 1fr 30px;
+
+            gap: 35px;
+
+            align-items: center;
+
+            padding: 30px 0;
+
+            border-bottom: 1px solid var(--resources-line);
+
+            color: inherit;
+
+            text-decoration: none;
+        }
+
+
+        .resource-item h3 {
+            margin: 0;
+
+            font-family: Georgia, "Times New Roman", serif;
+
+            font-size: 30px;
+
+            line-height: 1.05;
+
+            font-weight: 400;
+        }
+
+
+        .resource-item p {
+            margin: 0;
+
+            max-width: 650px;
+
+            font-family: Georgia, "Times New Roman", serif;
+
+            font-size: 16px;
+
+            line-height: 1.55;
+
+            color: var(--resources-muted);
+        }
+
+
+        .resource-status {
+            display: inline-block;
+
+            margin-left: 8px;
+
+            font-family: Arial, Helvetica, sans-serif;
+
+            font-size: 9px;
+
+            font-weight: 700;
+
+            letter-spacing: 0.16em;
+
+            text-transform: uppercase;
+
+            color: var(--resources-muted);
+        }
+
+
+        .resource-arrow {
+            font-size: 20px;
+
+            text-align: right;
+        }
+
+
+
+        /* =====================================================
+           READING PLAN FEATURE
+           ===================================================== */
+
+        .resources-reading-plan {
+            padding: 82px 0;
+
+            border-bottom: 1px solid var(--resources-line);
+        }
+
+
+        .resources-reading-grid {
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 85px;
+
+            align-items: center;
+        }
+
+
+        .resources-reading-image {
+            width: 100%;
+
+            aspect-ratio: 4 / 3;
+
+            object-fit: cover;
+
+            display: block;
+        }
+
+
+        .resources-reading h2 {
+            margin: 0 0 25px;
+
+            font-family: Georgia, "Times New Roman", serif;
+
+            font-size: clamp(2.8rem, 5vw, 4.5rem);
+
+            line-height: 0.98;
+
+            font-weight: 400;
+
+            letter-spacing: -0.045em;
+        }
+
+
+        .resources-link {
+            display: inline-block;
+
+            margin-top: 12px;
+
+            color: inherit;
+
+            text-decoration: none;
+
+            border-bottom: 1px solid var(--resources-charcoal);
+
+            padding-bottom: 7px;
+
+            font-family: Arial, Helvetica, sans-serif;
+
+            font-size: 10px;
+
+            font-weight: 700;
+
+            letter-spacing: 0.2em;
+
+            text-transform: uppercase;
+        }
+
+
+
+        /* =====================================================
+           COMING SOON
+           ===================================================== */
+
+        .resources-coming {
+            padding: 82px 0;
+
+            border-bottom: 1px solid var(--resources-line);
+        }
+
+
+        .resources-coming-grid {
+            display: grid;
+
+            grid-template-columns: 1fr 1fr 1fr;
+
+            gap: 0;
+        }
+
+
+        .resources-coming-item {
+            padding: 0 28px;
+
+            border-left: 1px solid var(--resources-line);
+        }
+
+
+        .resources-coming-item:first-child {
+            padding-left: 0;
+
+            border-left: 0;
+        }
+
+
+        .resources-coming-item:last-child {
+            padding-right: 0;
+        }
+
+
+        .resources-coming-item h3 {
+            margin: 0 0 15px;
+
+            font-family: Georgia, "Times New Roman", serif;
+
+            font-size: 27px;
+
+            line-height: 1.05;
+
+            font-weight: 400;
+        }
+
+
+        .resources-coming-item p {
+            margin: 0;
+
+            font-family: Georgia, "Times New Roman", serif;
+
+            font-size: 16px;
+
+            line-height: 1.55;
+
+            color: var(--resources-muted);
+        }
+
+
+        .resources-coming-label {
+            display: block;
+
+            margin-bottom: 18px;
+
+            font-family: Arial, Helvetica, sans-serif;
+
+            font-size: 10px;
+
+            font-weight: 700;
+
+            letter-spacing: 0.2em;
+
+            text-transform: uppercase;
+
+            color: var(--resources-muted);
+        }
+
+
+
+        /* =====================================================
+           FOUNDATION
+           ===================================================== */
+
+        .resources-foundation {
+            padding: 95px 20px;
+
+            text-align: center;
+
+            border-bottom: 1px solid var(--resources-line);
+        }
+
+
+        .resources-foundation blockquote {
+            max-width: 850px;
+
+            margin: 0 auto 25px;
+
+            font-family: Georgia, "Times New Roman", serif;
+
+            font-size: clamp(2.1rem, 4vw, 3.5rem);
+
+            line-height: 1.1;
+
+            font-style: italic;
+
+            font-weight: 400;
+        }
+
+
+        .resources-foundation-reference {
+            margin: 0;
+
+            font-family: Arial, Helvetica, sans-serif;
+
+            font-size: 11px;
+
+            font-weight: 700;
+
+            letter-spacing: 0.25em;
+
+            text-transform: uppercase;
+        }
+
+
+
+        /* =====================================================
+           RESPONSIVE
+           ===================================================== */
+
+        @media (max-width: 1100px) {
+
+            .resource-item {
+                grid-template-columns: 1fr 25px;
+                gap: 12px;
+                align-items: start;
+            }
+
+            .resource-item h3 {
+                grid-column: 1;
+            }
+
+            .resource-item p {
+                grid-column: 1 / -1;
+                margin-top: 4px;
+            }
+
+            .resource-arrow {
+                grid-column: 2;
+                grid-row: 1;
+            }
+
+        }
+
+
+        @media (max-width: 900px) {
+
+            .resources-container {
+                width: min(
+                    100% - 40px,
+                    720px
+                );
+            }
+
+
+            .resources-hero {
+                grid-template-columns: 1fr;
+            }
+
+
+            .resources-hero-copy {
+                padding: 65px 20px;
+            }
+
+
+            .resources-hero-image {
+                min-height: 320px;
+            }
+
+
+            .resources-intro-grid,
+            .resources-reading-grid {
+                grid-template-columns: 1fr;
+
+                gap: 45px;
+            }
+
+
+            .resources-section-heading {
+                grid-template-columns: 1fr;
+
+                gap: 30px;
+            }
+
+
+            .resources-section-heading p:last-child {
+                padding-left: 0;
+
+                padding-top: 25px;
+
+                border-left: 0;
+
+                border-top: 1px solid var(--resources-line);
+            }
+
+
+            .resource-item {
+                grid-template-columns:
+                    170px 1fr 20px;
+
+                gap: 20px;
+            }
+
+
+            .resources-coming-grid {
+                grid-template-columns: 1fr;
+
+                gap: 45px;
+            }
+
+
+            .resources-coming-item,
+            .resources-coming-item:first-child,
+            .resources-coming-item:last-child {
+                padding: 0;
+
+                border-left: 0;
+
+                border-top: 1px solid var(--resources-line);
+
+                padding-top: 35px;
+            }
+
+
+            .resources-coming-item:first-child {
+                border-top: 0;
+
+                padding-top: 0;
+            }
+
+        }
+
+
+
+        @media (max-width: 560px) {
+
+            .resources-container {
+                width: calc(100% - 40px);
+            }
+
+
+            .resources-hero h1 {
+                font-size: 4.1rem;
+            }
+
+
+            .resources-hero-subtitle {
+                font-size: 1.7rem;
+            }
+
+
+            .resource-item {
+                grid-template-columns:
+                    1fr 20px;
+
+                gap: 10px;
+            }
+
+
+            .resource-item p {
+                grid-column: 1 / -1;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+
+<body>
+
+
+
+<!-- =========================================================
+     HEADER
+     ========================================================= -->
+
+<header class="site-header">
+
+    <div class="container">
+
+        <a
+            class="site-logo"
+            href="index.html"
+        >
+            Daily Living in the Word
+        </a>
+
+
+        <nav class="main-nav">
+
+            <a href="index.html">
+                Home
+            </a>
+
+
+            <a href="articles.html">
+                Articles
+            </a>
+
+
+            <a href="bible.html">
+                Bible
+            </a>
+
+
+            <a href="theology.html">
+                Theology
+            </a>
+
+
+            <a
+                href="resources.html"
+                class="active"
+            >
+                Resources
+            </a>
+
+
+            <a href="about.html">
+                About
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+
+<!-- =========================================================
+     MAIN
+     ========================================================= -->
+
+<main class="resources-page">
+
+
+
+<!-- =========================================================
+     HERO
+     ========================================================= -->
+
+<section class="resources-hero">
+
+    <div class="resources-hero-copy">
+
+        <p class="resources-eyebrow">
+            Resources
+        </p>
+
+
+        <h1>
+            Resources
+        </h1>
+
+
+        <p class="resources-hero-subtitle">
+            Tools for reading,
+            studying, and living
+            God's Word.
+        </p>
+
+    </div>
+
+
+    <div class="resources-hero-image"></div>
+
+</section>
+
+
+
+<!-- =========================================================
+     INTRO
+     ========================================================= -->
+
+<section class="resources-intro">
+
+    <div class="resources-container">
+
+        <div class="resources-intro-grid">
+
+
+            <div>
+
+                <p class="resources-eyebrow">
+                    Why Resources?
+                </p>
+
+
+                <h2>
+                    Helpful tools
+                    for faithful living.
+                </h2>
+
+            </div>
+
+
+
+            <div class="resources-body">
+
+                <p>
+                    Sometimes the most useful thing is simply having
+                    a good place to begin.
+                </p>
+
+
+                <p>
+                    This section will bring together resources created
+                    to help you read Scripture, study God's Word,
+                    understand theology, and grow in the Christian life.
+                </p>
+
+
+                <p>
+                    Some resources will be created here at Daily Living
+                    in the Word. Others will point you toward books,
+                    studies, and material that have been helpful for
+                    Christian growth.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     RESOURCE LIBRARY
+     ========================================================= -->
+
+<section class="resources-library">
+
+    <div class="resources-container">
+
+
+        <div class="resources-section-heading">
+
+
+            <div>
+
+                <p class="resources-eyebrow">
+                    Resource Library
+                </p>
+
+
+                <h2>
+                    Growing library.
+                    Useful resources.
+                </h2>
+
+            </div>
+
+
+            <p>
+                This library will grow over time. For now, several
+                sections are being prepared for future studies,
+                downloads, and recommendations.
+            </p>
+
+
+        </div>
+
+
+
+        <div class="resources-list">
+
+
+            <!-- BIBLE READING PLANS -->
+
+            <a
+                class="resource-item"
+                href="bible-reading-plan.html"
+            >
+
+                <h3>
+                    Bible Reading Plans
+                </h3>
+
+
+                <p>
+                    Reading plans designed to help you develop a
+                    consistent habit of being in God's Word.
+                    <span class="resource-status">
+                        Available
+                    </span>
+                </p>
+
+
+                <span class="resource-arrow">
+                    →
+                </span>
+
+            </a>
+
+
+
+            <!-- BIBLE STUDIES -->
+
+            <a
+                class="resource-item"
+                href="#"
+            >
+
+                <h3>
+                    Bible Studies
+                </h3>
+
+
+                <p>
+                    Future studies exploring books, passages,
+                    themes, and important biblical truths.
+                    <span class="resource-status">
+                        Coming Soon
+                    </span>
+                </p>
+
+
+                <span class="resource-arrow">
+                    →
+                </span>
+
+            </a>
+
+
+
+            <!-- THEOLOGY -->
+
+            <a
+                class="resource-item"
+                href="theology.html"
+            >
+
+                <h3>
+                    Theology Resources
+                </h3>
+
+
+                <p>
+                    Resources for understanding Christian doctrine
+                    and connecting what we believe with how we live.
+                    <span class="resource-status">
+                        Growing
+                    </span>
+                </p>
+
+
+                <span class="resource-arrow">
+                    →
+                </span>
+
+            </a>
+
+
+
+            <!-- PRINTABLES -->
+
+            <a
+                class="resource-item"
+                href="#"
+            >
+
+                <h3>
+                    Printable Resources
+                </h3>
+
+
+                <p>
+                    Downloadable reading guides, study sheets,
+                    checklists, and other practical resources.
+                    <span class="resource-status">
+                        Coming Soon
+                    </span>
+                </p>
+
+
+                <span class="resource-arrow">
+                    →
+                </span>
+
+            </a>
+
+
+
+            <!-- RECOMMENDED READING -->
+
+            <a
+                class="resource-item"
+                href="#"
+            >
+
+                <h3>
+                    Recommended Reading
+                </h3>
+
+
+                <p>
+                    Books and authors that can encourage deeper
+                    biblical understanding and Christian growth.
+                    <span class="resource-status">
+                        Coming Soon
+                    </span>
+                </p>
+
+
+                <span class="resource-arrow">
+                    →
+                </span>
+
+            </a>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     READING PLAN FEATURE
+     ========================================================= -->
+
+<section class="resources-reading-plan">
+
+    <div class="resources-container">
+
+        <div class="resources-reading-grid">
+
+
+            <img
+                class="resources-reading-image"
+                src="images/bible-read.jpg"
+                alt="Open Bible ready for reading"
+            >
+
+
+            <div>
+
+                <p class="resources-eyebrow">
+                    Start Here
+                </p>
+
+
+                <h2>
+                    Read through
+                    the Bible.
+                </h2>
+
+
+                <div class="resources-body">
+
+                    <p>
+                        If you're looking for a place to begin,
+                        start with Scripture.
+                    </p>
+
+
+                    <p>
+                        Our existing chronological Bible reading
+                        plan is designed to help you follow the
+                        story of Scripture through the year.
+                    </p>
+
+                </div>
+
+
+                <a
+                    class="resources-link"
+                    href="bible-reading-plan.html"
+                >
+                    View the Reading Plan →
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     FUTURE RESOURCES
+     ========================================================= -->
+
+<section class="resources-coming">
+
+    <div class="resources-container">
+
+        <div class="resources-coming-grid">
+
+
+            <div class="resources-coming-item">
+
+                <span class="resources-coming-label">
+                    Future Resource
+                </span>
+
+
+                <h3>
+                    Study Guides
+                </h3>
+
+
+                <p>
+                    Printable guides to accompany Bible studies,
+                    articles, and theological topics.
+                </p>
+
+            </div>
+
+
+
+            <div class="resources-coming-item">
+
+                <span class="resources-coming-label">
+                    Future Resource
+                </span>
+
+
+                <h3>
+                    Scripture Printables
+                </h3>
+
+
+                <p>
+                    Simple Scripture-based resources designed
+                    for personal study and encouragement.
+                </p>
+
+            </div>
+
+
+
+            <div class="resources-coming-item">
+
+                <span class="resources-coming-label">
+                    Future Resource
+                </span>
+
+
+                <h3>
+                    Reading Recommendations
+                </h3>
+
+
+                <p>
+                    Thoughtful recommendations for books and
+                    resources worth exploring.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     SCRIPTURE FOUNDATION
+     ========================================================= -->
+
+<section class="resources-foundation">
+
+    <p class="resources-eyebrow">
+        Our Foundation
+    </p>
+
+
+    <blockquote>
+        “Let the word of Christ dwell in you richly.”
+    </blockquote>
+
+
+    <p class="resources-foundation-reference">
+        Colossians 3:16
+    </p>
+
+</section>
+
+
+
+</main>
+
+
+
+<!-- =========================================================
+     FOOTER
+     ========================================================= -->
+
+<footer class="site-footer">
+
+    <div class="container">
+
+        <p>
+            “Let the word of Christ dwell in you richly.”
+            — Colossians 3:16
+        </p>
+
+
+        <p class="footer-brand">
+            Daily Living in the Word
+        </p>
+
+
+        <p>
+            Biblical truth for everyday life.
+        </p>
+
+
+        <p class="copyright">
+            © 2026 Daily Living in the Word
+        </p>
+
+    </div>
+
+</footer>
+
+
+
+</body>
+
+</html>

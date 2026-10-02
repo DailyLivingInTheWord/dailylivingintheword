@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Bible | Daily Living in the Word</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: #f7f5ef;
+            color: #292723;
+            font-family: Arial, sans-serif;
+        }
+
+        .page {
+            width: 92%;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 50px 0 70px;
+        }
+
+        /* HEADER */
+
+        .site-header {
+            text-align: center;
+            margin-bottom: 55px;
+        }
+
+        .site-title {
+            font-family: Georgia, serif;
+            font-size: 2rem;
+            font-weight: normal;
+            margin-bottom: 8px;
+        }
+
+        .site-subtitle {
+            color: #81796d;
+            font-size: 0.78rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+        }
+
+        .main-nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 22px;
+            margin-top: 28px;
+        }
+
+        .main-nav a {
+            color: #292723;
+            text-decoration: none;
+            font-size: 0.78rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        .main-nav a:hover,
+        .main-nav a.active {
+            color: #81796d;
+        }
+
+        /* PAGE INTRO */
+
+        .page-intro {
+            max-width: 760px;
+            margin: 0 auto 65px;
+            text-align: center;
+        }
+
+        .page-intro h1 {
+            font-family: Georgia, serif;
+            font-size: 3rem;
+            font-weight: normal;
+            margin: 0 0 22px;
+        }
+
+        .page-intro p {
+            font-family: Georgia, serif;
+            font-size: 1.15rem;
+            line-height: 1.85;
+            color: #5f5a52;
+            margin: 0;
+        }
+
+        /* FEATURE */
+
+        .reading-plan-feature {
+            background: #292723;
+            color: #fffdf8;
+            padding: 45px;
+            margin-bottom: 65px;
+        }
+
+        .feature-label {
+            font-size: 0.72rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: #c9c2b7;
+            margin-bottom: 15px;
+        }
+
+        .reading-plan-feature h2 {
+            font-family: Georgia, serif;
+            font-weight: normal;
+            font-size: 2.2rem;
+            margin: 0 0 15px;
+        }
+
+        .reading-plan-feature p {
+            max-width: 680px;
+            font-family: Georgia, serif;
+            font-size: 1.05rem;
+            line-height: 1.75;
+            color: #e6e1d8;
+            margin: 0 0 28px;
+        }
+
+        .feature-button {
+            display: inline-block;
+            background: #f7f5ef;
+            color: #292723;
+            padding: 13px 20px;
+            text-decoration: none;
+            font-size: 0.76rem;
+            letter-spacing: 0.07em;
+            text-transform: uppercase;
+        }
+
+        .feature-button:hover {
+            opacity: 0.8;
+        }
+
+        /* SECTIONS */
+
+        .section {
+            margin-bottom: 70px;
+        }
+
+        .section-heading {
+            border-bottom: 1px solid #ddd8ce;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+
+        .section-heading h2 {
+            font-family: Georgia, serif;
+            font-size: 2rem;
+            font-weight: normal;
+            margin: 0;
+        }
+
+        .section-heading p {
+            color: #81796d;
+            line-height: 1.6;
+            margin: 8px 0 0;
+        }
+
+        /* CARDS */
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            background: #fffdf8;
+            border: 1px solid #e0dbd1;
+            padding: 30px;
+            text-decoration: none;
+            color: #292723;
+            transition: transform 0.2s ease, border-color 0.2s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+            border-color: #aaa297;
+        }
+
+        .card-label {
+            color: #81796d;
+            font-size: 0.7rem;
+            letter-spacing: 0.11em;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        .card h3 {
+            font-family: Georgia, serif;
+            font-size: 1.45rem;
+            font-weight: normal;
+            margin: 0 0 10px;
+        }
+
+        .card p {
+            color: #625d55;
+            line-height: 1.7;
+            margin: 0;
+        }
+
+        /* BIBLE BOOKS */
+
+        .books-intro {
+            max-width: 760px;
+            font-family: Georgia, serif;
+            line-height: 1.8;
+            color: #5f5a52;
+            margin-bottom: 30px;
+        }
+
+        .book-columns {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 35px;
+        }
+
+        .book-group {
+            background: #eeebe3;
+            padding: 28px;
+        }
+
+        .book-group h3 {
+            font-family: Georgia, serif;
+            font-size: 1.35rem;
+            font-weight: normal;
+            margin: 0 0 18px;
+        }
+
+        .book-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 7px 20px;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .book-list li {
+            color: #5f5a52;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        /* SCRIPTURE */
+
+        .scripture-section {
+            background: #eeebe3;
+            padding: 45px;
+            text-align: center;
+            margin-bottom: 70px;
+        }
+
+        .scripture-section p {
+            max-width: 760px;
+            margin: 0 auto 15px;
+            font-family: Georgia, serif;
+            font-size: 1.35rem;
+            line-height: 1.8;
+        }
+
+        .scripture-reference {
+            color: #81796d;
+            font-size: 0.76rem;
+            letter-spacing: 0.09em;
+            text-transform: uppercase;
+        }
+
+        /* FOOTER */
+
+        footer {
+            border-top: 1px solid #ddd8ce;
+            padding-top: 30px;
+            text-align: center;
+            color: #81796d;
+            font-size: 0.8rem;
+        }
+
+        .footer-tagline {
+            margin-top: 8px;
+        }
+
+        /* RESPONSIVE */
+
+        @media (max-width: 750px) {
+
+            .page {
+                padding-top: 35px;
+            }
+
+            .page-intro h1 {
+                font-size: 2.3rem;
+            }
+
+            .reading-plan-feature {
+                padding: 30px;
+            }
+
+            .card-grid,
+            .book-columns {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+        @media (max-width: 500px) {
+
+            .main-nav {
+                gap: 14px;
+            }
+
+            .main-nav a {
+                font-size: 0.7rem;
+            }
+
+            .page-intro {
+                margin-bottom: 45px;
+            }
+
+            .page-intro h1 {
+                font-size: 2rem;
+            }
+
+            .page-intro p {
+                font-size: 1rem;
+            }
+
+            .reading-plan-feature {
+                padding: 25px;
+            }
+
+            .reading-plan-feature h2 {
+                font-size: 1.8rem;
+            }
+
+            .card {
+                padding: 25px;
+            }
+
+            .book-list {
+                grid-template-columns: 1fr;
+            }
+
+            .scripture-section {
+                padding: 30px 20px;
+            }
+
+            .scripture-section p {
+                font-size: 1.15rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="page">
+
+    <!-- HEADER -->
+
+    <header class="site-header">
+
+        <div class="site-title">
+            Daily Living in the Word
+        </div>
+
+        <div class="site-subtitle">
+            Scripture • Theology • Christian Living
+        </div>
+
+        <nav class="main-nav" aria-label="Main navigation">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="articles.html">
+                Articles
+            </a>
+
+            <a href="bible.html" class="active">
+                Bible
+            </a>
+
+            <a href="theology.html">
+                Theology
+            </a>
+
+            <a href="resources.html">
+                Resources
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <!-- INTRO -->
+
+        <section class="page-intro">
+
+            <h1>The Bible</h1>
+
+            <p>
+                God has spoken through His Word. Here you will find resources
+                designed to help you read Scripture, understand Scripture,
+                and live in light of Scripture.
+            </p>
+
+        </section>
+
+
+        <!-- READING PLAN FEATURE -->
+
+        <section class="reading-plan-feature">
+
+            <div class="feature-label">
+                Start Here
+            </div>
+
+            <h2>
+                365-Day Bible Reading Plan
+            </h2>
+
+            <p>
+                Walk through the Bible over the course of a year with a
+                structured daily reading plan. Read consistently, follow
+                the unfolding story of Scripture, and make God's Word part
+                of your everyday life.
+            </p>
+
+            <a
+                href="bible-reading-plan.html"
+                class="feature-button">
+                Explore the Reading Plan
+            </a>
+
+        </section>
+
+
+        <!-- BIBLE STUDY -->
+
+        <section class="section">
+
+            <div class="section-heading">
+
+                <h2>
+                    Bible Study
+                </h2>
+
+                <p>
+                    Resources to help you go deeper into God's Word.
+                </p>
+
+            </div>
+
+
+            <div class="card-grid">
+
+                <a href="articles.html" class="card">
+
+                    <div class="card-label">
+                        Study
+                    </div>
+
+                    <h3>
+                        Bible Articles
+                    </h3>
+
+                    <p>
+                        Explore articles that examine Scripture and consider
+                        how biblical truth shapes everyday Christian living.
+                    </p>
+
+                </a>
+
+
+                <a href="resources.html" class="card">
+
+                    <div class="card-label">
+                        Resources
+                    </div>
+
+                    <h3>
+                        Bible Study Resources
+                    </h3>
+
+                    <p>
+                        Find reading plans, study guides, downloadable
+                        resources, and other tools for growing in the Word.
+                    </p>
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- BOOKS OF THE BIBLE -->
+
+        <section class="section">
+
+            <div class="section-heading">
+
+                <h2>
+                    The Books of the Bible
+                </h2>
+
+                <p>
+                    The sixty-six books that make up the Old and New Testaments.
+                </p>
+
+            </div>
+
+
+            <p class="books-intro">
+                Scripture is one unified story of God's redemptive work.
+                The books below were written across different periods,
+                places, and circumstances, yet together they testify to
+                God's revelation and His purposes in history.
+            </p>
+
+
+            <div class="book-columns">
+
+                <!-- OLD TESTAMENT -->
+
+                <div class="book-group">
+
+                    <h3>
+                        Old Testament
+                    </h3>
+
+                    <ul class="book-list">
+
+                        <li>Genesis</li>
+                        <li>Exodus</li>
+                        <li>Leviticus</li>
+                        <li>Numbers</li>
+                        <li>Deuteronomy</li>
+                        <li>Joshua</li>
+                        <li>Judges</li>
+                        <li>Ruth</li>
+                        <li>1 Samuel</li>
+                        <li>2 Samuel</li>
+                        <li>1 Kings</li>
+                        <li>2 Kings</li>
+                        <li>1 Chronicles</li>
+                        <li>2 Chronicles</li>
+                        <li>Ezra</li>
+                        <li>Nehemiah</li>
+                        <li>Esther</li>
+                        <li>Job</li>
+                        <li>Psalms</li>
+                        <li>Proverbs</li>
+                        <li>Ecclesiastes</li>
+                        <li>Song of Solomon</li>
+                        <li>Isaiah</li>
+                        <li>Jeremiah</li>
+                        <li>Lamentations</li>
+                        <li>Ezekiel</li>
+                        <li>Daniel</li>
+                        <li>Hosea</li>
+                        <li>Joel</li>
+                        <li>Amos</li>
+                        <li>Obadiah</li>
+                        <li>Jonah</li>
+                        <li>Micah</li>
+                        <li>Nahum</li>
+                        <li>Habakkuk</li>
+                        <li>Zephaniah</li>
+                        <li>Haggai</li>
+                        <li>Zechariah</li>
+                        <li>Malachi</li>
+
+                    </ul>
+
+                </div>
+
+
+                <!-- NEW TESTAMENT -->
+
+                <div class="book-group">
+
+                    <h3>
+                        New Testament
+                    </h3>
+
+                    <ul class="book-list">
+
+                        <li>Matthew</li>
+                        <li>Mark</li>
+                        <li>Luke</li>
+                        <li>John</li>
+                        <li>Acts</li>
+                        <li>Romans</li>
+                        <li>1 Corinthians</li>
+                        <li>2 Corinthians</li>
+                        <li>Galatians</li>
+                        <li>Ephesians</li>
+                        <li>Philippians</li>
+                        <li>Colossians</li>
+                        <li>1 Thessalonians</li>
+                        <li>2 Thessalonians</li>
+                        <li>1 Timothy</li>
+                        <li>2 Timothy</li>
+                        <li>Titus</li>
+                        <li>Philemon</li>
+                        <li>Hebrews</li>
+                        <li>James</li>
+                        <li>1 Peter</li>
+                        <li>2 Peter</li>
+                        <li>1 John</li>
+                        <li>2 John</li>
+                        <li>3 John</li>
+                        <li>Jude</li>
+                        <li>Revelation</li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- SCRIPTURE -->
+
+        <section class="scripture-section">
+
+            <p>
+                “All Scripture is breathed out by God and profitable for
+                teaching, for reproof, for correction, and for training
+                in righteousness.”
+            </p>
+
+            <div class="scripture-reference">
+                2 Timothy 3:16
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div>
+            Daily Living in the Word
+        </div>
+
+        <div class="footer-tagline">
+            Daily living. In the Word.
+        </div>
+
+    </footer>
+
+</div>
+
+</body>
+</html>

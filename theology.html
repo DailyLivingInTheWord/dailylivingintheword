@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Theology resources from Daily Living in the Word — knowing what we believe and why we believe it."
+    >
+
+    <title>Theology | Daily Living in the Word</title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+    <style>
+
+        :root {
+            --theology-ivory: #f5f1e8;
+            --theology-paper: #faf8f2;
+            --theology-charcoal: #292724;
+            --theology-muted: #6f6a62;
+            --theology-line: #d9d3c8;
+        }
+
+
+        body {
+            background: var(--theology-ivory);
+            color: var(--theology-charcoal);
+        }
+
+
+        .theology-page {
+            overflow: hidden;
+        }
+
+
+        .theology-container {
+            width: min(1180px, calc(100% - 80px));
+            margin: 0 auto;
+        }
+
+
+        .theology-eyebrow {
+            margin: 0 0 22px;
+
+            font-family: Arial, Helvetica, sans-serif;
+
+            font-size: 11px;
+            font-weight: 700;
+
+            letter-spacing: 0.25em;
+
+            text-transform: uppercase;
+        }
+
+
+
+        /* =====================================================
+           HERO
+           ===================================================== */
+
+        .theology-hero {
+            display: grid;
+
+            grid-template-columns: 40% 60%;
+
+            min-height: 430px;
+
+            border-top: 1px solid var(--theology-line);
+            border-bottom: 1px solid var(--theology-line);
+        }
+
+
+        .theology-hero-copy {
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: center;
+
+            padding: 70px 55px 70px
+                max(40px, calc((100vw - 1180px) / 2));
+
+            background: var(--theology-paper);
+        }
+
+
+        .theology-hero h1 {
+            margin: 0 0 22px;
+
+            font-family: Georgia, "Times New Roman", serif;
+
+            font-size: clamp(4rem, 7vw, 6.5rem);
+
+            line-height: 0.9;
+
+            font-weight: 400;
+
+            letter-spacing: -0.055em;
+        }
+
+
+        .theology-hero-subtitle {
+            max-width: 450px;
+
+            margin: 0;
+
+            font-family: Georgia, "Times New Roman", serif;
+
+            font-size: clamp(1.8rem, 3vw, 3rem);
+
+            line-height: 1.08;
+        }
+
+
+        .theology-hero-image {
+            min-height: 430px;
+
+            background-image:
+                url("images/about-scripture-reading.jpg");
+
+            background-size: cover;
+
+            background-position: center;
+        }
+
+
+
+        /* =====================================================
+           INTRO
+           ===================================================== */
+
+        .theology-intro {
+            padding: 82px 0;
+
+            border-bottom: 1px solid var(--theology-line);
+        }
+
+
+        .theology-intro-grid {
+            display: grid;
+
+            grid-template-columns: 0.9fr 1.1fr;
+
+            gap: 90px;
+
+            align-items: start;
+        }
+
+
+        .theology-intro h2 {
+            margin: 0;
+
+            font-family: Georgia, "Times New Roman", serif;
+
+            font-size: clamp(3rem, 5vw, 5rem);
+
+            line-height: 0.98;
+
+            font-weight: 400;
+
+            letter-spacing: -0.045em;
+        }
+
+
+        .theology-body {
+            font-family: Georgia, "Times New Roman", serif;
+
+            font-size: 18px;
+
+            line-height: 1.75;
+        }
+
+
+        .theology-body p {
+            margin: 0 0 22px;
+        }
+
+
+        .theology-body p:last-child {
+            margin-bottom: 0;
+        }
+
+
+
+        /* =====================================================
+           FOUNDATIONS
+           ===================================================== */
+
+        .theology-doctrines {
+            padding: 82px 0;
+
+            border-bottom: 1px solid var(--theology-line);
+        }
+
+
+        .theology-section-heading {
+            display: grid;
+
+            grid-template-columns: 1fr 0.75fr;
+
+            gap: 70px;
+
+            align-items: end;
+
+            margin-bottom: 50px;
+        }
+
+
+        .theology-section-heading h2 {
+            margin: 0;
+
+            font-family: Georgia, "Times New Roman", serif;
+
+            font-size: clamp(3rem, 5vw, 5rem);
+
+            line-height: 0.98;
+
+            font-weight: 400;
+
+            letter-spacing: -0.045em;
+        }
+
+
+        .theology-section-heading p:last-child {
+            margin: 0;
+
+            padding-left: 35px;
+
+            border-left: 1px solid var(--theology-line);
+
+            font-family: Georgia, "Times New Roman", serif;
+
+            font-size: 18px;
+
+            line-height: 1.6;
+        }
+
+
+        .theology-list {
+            border-top: 1px solid var(--theology-line);
+        }
+
+
+        .theology-item {
+            display: grid;
+
+            grid-template-columns: 230px 1fr 30px;
+
+            gap: 35px;
+
+            align-items: center;
+
+            padding: 30px 0;
+
+            border-bottom: 1px solid var(--theology-line);
+
+            color: inherit;
+
+            text-decoration: none;
+        }
+
+
+        .theology-item h3 {
+            margin: 0;
+
+            font-family: Georgia, "Times New Roman", serif;
+
+            font-size: 30px;
+
+            line-height: 1.05;
+
+            font-weight: 400;
+        }
+
+
+        .theology-item p {
+            margin: 0;
+
+            max-width: 620px;
+
+            font-family: Georgia, "Times New Roman", serif;
+
+            font-size: 16px;
+
+            line-height: 1.55;
+
+            color: var(--theology-muted);
+        }
+
+
+        .theology-arrow {
+            font-size: 20px;
+
+            text-align: right;
+        }
+
+
+
+        /* =====================================================
+           DOCTRINE IN 60 SECONDS
+           ===================================================== */
+
+        .theology-shortform {
+            padding: 82px 0;
+
+            border-bottom: 1px solid var(--theology-line);
+        }
+
+
+        .theology-shortform-grid {
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 85px;
+
+            align-items: center;
+        }
+
+
+        .theology-shortform h2 {
+            margin: 0 0 25px;
+
+            font-family: Georgia, "Times New Roman", serif;
+
+            font-size: clamp(2.8rem, 5vw, 4.5rem);
+
+            line-height: 0.98;
+
+            font-weight: 400;
+
+            letter-spacing: -0.045em;
+        }
+
+
+        .theology-shortform-image {
+            width: 100%;
+
+            aspect-ratio: 4 / 3;
+
+            object-fit: cover;
+
+            display: block;
+        }
+
+
+        .theology-tag {
+            display: inline-block;
+
+            margin-top: 12px;
+
+            padding-bottom: 7px;
+
+            border-bottom: 1px solid var(--theology-charcoal);
+
+            font-family: Arial, Helvetica, sans-serif;
+
+            font-size: 10px;
+
+            font-weight: 700;
+
+            letter-spacing: 0.2em;
+
+            text-transform: uppercase;
+        }
+
+
+
+        /* =====================================================
+           FOUNDATION
+           ===================================================== */
+
+        .theology-foundation {
+            padding: 95px 20px;
+
+            text-align: center;
+
+            border-bottom: 1px solid var(--theology-line);
+        }
+
+
+        .theology-foundation blockquote {
+            max-width: 850px;
+
+            margin: 0 auto 25px;
+
+            font-family: Georgia, "Times New Roman", serif;
+
+            font-size: clamp(2.1rem, 4vw, 3.5rem);
+
+            line-height: 1.1;
+
+            font-style: italic;
+
+            font-weight: 400;
+        }
+
+
+        .theology-foundation-reference {
+            margin: 0;
+
+            font-family: Arial, Helvetica, sans-serif;
+
+            font-size: 11px;
+
+            font-weight: 700;
+
+            letter-spacing: 0.25em;
+
+            text-transform: uppercase;
+        }
+
+
+
+        /* =====================================================
+           TABLET
+           ===================================================== */
+
+        @media (max-width: 900px) {
+
+            .theology-container {
+                width: min(
+                    100% - 40px,
+                    720px
+                );
+            }
+
+
+            .theology-hero {
+                grid-template-columns: 1fr;
+            }
+
+
+            .theology-hero-copy {
+                padding: 65px 20px;
+            }
+
+
+            .theology-hero-image {
+                min-height: 320px;
+            }
+
+
+            .theology-intro-grid,
+            .theology-shortform-grid {
+                grid-template-columns: 1fr;
+
+                gap: 45px;
+            }
+
+
+            .theology-section-heading {
+                grid-template-columns: 1fr;
+
+                gap: 30px;
+            }
+
+
+            .theology-section-heading p:last-child {
+                padding-left: 0;
+
+                padding-top: 25px;
+
+                border-left: 0;
+
+                border-top: 1px solid var(--theology-line);
+            }
+
+
+            .theology-item {
+                grid-template-columns:
+                    170px 1fr 20px;
+
+                gap: 20px;
+            }
+
+        }
+
+
+
+        /* =====================================================
+           MOBILE
+           ===================================================== */
+
+        @media (max-width: 560px) {
+
+            .theology-container {
+                width: calc(100% - 40px);
+            }
+
+
+            .theology-hero h1 {
+                font-size: 4.1rem;
+            }
+
+
+            .theology-hero-subtitle {
+                font-size: 1.7rem;
+            }
+
+
+            .theology-item {
+                grid-template-columns:
+                    1fr 20px;
+
+                gap: 10px;
+            }
+
+
+            .theology-item p {
+                grid-column: 1 / -1;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+
+<body>
+
+
+
+<!-- =========================================================
+     HEADER
+     ========================================================= -->
+
+<header class="site-header">
+
+    <div class="container">
+
+        <a
+            class="site-logo"
+            href="index.html"
+        >
+            Daily Living in the Word
+        </a>
+
+
+        <nav class="main-nav">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="articles.html">
+                Articles
+            </a>
+
+            <a href="bible.html">
+                Bible
+            </a>
+
+            <a
+                href="theology.html"
+                class="active"
+            >
+                Theology
+            </a>
+
+            <a href="resources.html">
+                Resources
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+
+<!-- =========================================================
+     MAIN
+     ========================================================= -->
+
+<main class="theology-page">
+
+
+
+<!-- =========================================================
+     HERO
+     ========================================================= -->
+
+<section class="theology-hero">
+
+    <div class="theology-hero-copy">
+
+        <p class="theology-eyebrow">
+            Theology
+        </p>
+
+
+        <h1>
+            Theology
+        </h1>
+
+
+        <p class="theology-hero-subtitle">
+            Knowing what we believe.<br>
+            Knowing why we believe it.
+        </p>
+
+    </div>
+
+
+    <div class="theology-hero-image"></div>
+
+</section>
+
+
+
+<!-- =========================================================
+     INTRODUCTION
+     ========================================================= -->
+
+<section class="theology-intro">
+
+    <div class="theology-container">
+
+        <div class="theology-intro-grid">
+
+
+            <div>
+
+                <p class="theology-eyebrow">
+                    Why Theology Matters
+                </p>
+
+
+                <h2>
+                    Theology is not
+                    merely academic.
+                </h2>
+
+            </div>
+
+
+
+            <div class="theology-body">
+
+                <p>
+                    What we believe about God shapes how we worship
+                    Him, how we understand salvation, how we respond
+                    to suffering, and how we live the Christian life.
+                </p>
+
+
+                <p>
+                    Theology begins with Scripture. It asks us to
+                    slow down, read carefully, understand what God
+                    has revealed, and consider the implications for
+                    our lives.
+                </p>
+
+
+                <p>
+                    The goal is not simply to know more theological
+                    terms. It is to know God rightly and to live
+                    faithfully before Him.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     THEOLOGICAL FOUNDATIONS
+     ========================================================= -->
+
+<section class="theology-doctrines">
+
+    <div class="theology-container">
+
+
+        <div class="theology-section-heading">
+
+
+            <div>
+
+                <p class="theology-eyebrow">
+                    Foundations
+                </p>
+
+
+                <h2>
+                    What does
+                    Scripture teach?
+                </h2>
+
+            </div>
+
+
+            <p>
+                These sections will become a growing library of
+                biblical and theological studies. Each begins with
+                Scripture and seeks to connect doctrine with the
+                Christian life.
+            </p>
+
+
+        </div>
+
+
+
+        <div class="theology-list">
+
+
+            <!-- DOCTRINE OF GOD -->
+
+            <a
+                class="theology-item"
+                href="#"
+            >
+
+                <h3>
+                    Doctrine of God
+                </h3>
+
+
+                <p>
+                    God's character, attributes, holiness,
+                    sovereignty, goodness, and glory.
+                    <strong>Coming Soon.</strong>
+                </p>
+
+
+                <span class="theology-arrow">
+                    →
+                </span>
+
+            </a>
+
+
+
+            <!-- DOCTRINE OF SCRIPTURE -->
+
+            <a
+                class="theology-item"
+                href="#"
+            >
+
+                <h3>
+                    Doctrine of Scripture
+                </h3>
+
+
+                <p>
+                    What the Bible says about God's Word,
+                    its authority, truth, inspiration, and
+                    sufficiency.
+                    <strong>Coming Soon.</strong>
+                </p>
+
+
+                <span class="theology-arrow">
+                    →
+                </span>
+
+            </a>
+
+
+
+            <!-- DOCTRINE OF SALVATION -->
+
+            <a
+                class="theology-item"
+                href="#"
+            >
+
+                <h3>
+                    Doctrine of Salvation
+                </h3>
+
+
+                <p>
+                    Sin, grace, faith, repentance, justification,
+                    sanctification, perseverance, and the saving
+                    work of Christ.
+                    <strong>Coming Soon.</strong>
+                </p>
+
+
+                <span class="theology-arrow">
+                    →
+                </span>
+
+            </a>
+
+
+
+            <!-- DOCTRINE OF THE CHURCH -->
+
+            <a
+                class="theology-item"
+                href="#"
+            >
+
+                <h3>
+                    Doctrine of the Church
+                </h3>
+
+
+                <p>
+                    The nature, purpose, worship, leadership,
+                    discipline, and mission of Christ's church.
+                    <strong>Coming Soon.</strong>
+                </p>
+
+
+                <span class="theology-arrow">
+                    →
+                </span>
+
+            </a>
+
+
+
+            <!-- CHRISTIAN LIFE -->
+
+            <a
+                class="theology-item"
+                href="#"
+            >
+
+                <h3>
+                    Christian Life
+                </h3>
+
+
+                <p>
+                    Prayer, holiness, discipleship, suffering,
+                    wisdom, community, and what it means to
+                    follow Christ faithfully.
+                    <strong>Coming Soon.</strong>
+                </p>
+
+
+                <span class="theology-arrow">
+                    →
+                </span>
+
+            </a>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     DOCTRINE IN 60 SECONDS
+     ========================================================= -->
+
+<section class="theology-shortform">
+
+    <div class="theology-container">
+
+        <div class="theology-shortform-grid">
+
+
+            <div>
+
+                <p class="theology-eyebrow">
+                    Doctrine in 60 Seconds
+                </p>
+
+
+                <h2>
+                    Big truths.
+                    Simply explained.
+                </h2>
+
+
+                <div class="theology-body">
+
+                    <p>
+                        Theology does not always need a long
+                        explanation to begin a conversation.
+                    </p>
+
+
+                    <p>
+                        Doctrine in 60 Seconds is a growing
+                        collection of short-form videos designed
+                        to introduce important biblical truths
+                        clearly and briefly.
+                    </p>
+
+
+                    <p>
+                        The short format is only the beginning.
+                        Each topic can eventually lead to deeper
+                        study here on the website.
+                    </p>
+
+                </div>
+
+
+                <span class="theology-tag">
+                    More Coming Soon
+                </span>
+
+            </div>
+
+
+
+            <img
+                class="theology-shortform-image"
+                src="images/bible-study.jpg"
+                alt="Books and Bible ready for theological study"
+            >
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     SCRIPTURE FOUNDATION
+     ========================================================= -->
+
+<section class="theology-foundation">
+
+    <p class="theology-eyebrow">
+        Our Foundation
+    </p>
+
+
+    <blockquote>
+        “Sanctify them in the truth;
+        your word is truth.”
+    </blockquote>
+
+
+    <p class="theology-foundation-reference">
+        John 17:17
+    </p>
+
+</section>
+
+
+
+</main>
+
+
+
+<!-- =========================================================
+     FOOTER
+     ========================================================= -->
+
+<footer class="site-footer">
+
+    <div class="container">
+
+        <p>
+            “Let the word of Christ dwell in you richly.”
+            — Colossians 3:16
+        </p>
+
+
+        <p class="footer-brand">
+            Daily Living in the Word
+        </p>
+
+
+        <p>
+            Biblical truth for everyday life.
+        </p>
+
+
+        <p class="copyright">
+            © 2026 Daily Living in the Word
+        </p>
+
+    </div>
+
+</footer>
+
+
+
+</body>
+
+</html>
