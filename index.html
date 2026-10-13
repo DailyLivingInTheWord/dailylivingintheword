@@ -499,6 +499,66 @@
 
 
         /* ---------------------------------------------------------
+           EXTERNAL DAILY BIBLE READING
+           --------------------------------------------------------- */
+
+        .home-daily-reading {
+            padding: 85px 0 90px;
+            border-bottom: 1px solid #ddd9d0;
+        }
+
+        .home-daily-reading-inner {
+            display: grid;
+            grid-template-columns: 0.95fr 1.05fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .home-daily-reading-image {
+            display: block;
+            width: 100%;
+            aspect-ratio: 4 / 3;
+            object-fit: cover;
+        }
+
+        .home-daily-reading h2 {
+            margin: 0;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: clamp(2.5rem, 4vw, 4rem);
+            line-height: 1.02;
+            font-weight: 400;
+            letter-spacing: -0.04em;
+            color: #282623;
+        }
+
+        .home-daily-reading-copy p {
+            max-width: 650px;
+            margin: 0;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: #625d56;
+        }
+
+        .home-daily-reading-link {
+            display: inline-block;
+            margin-top: 24px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.04em;
+            color: #282623;
+            text-decoration: none;
+            border-bottom: 1px solid #282623;
+            padding-bottom: 6px;
+        }
+
+        .home-daily-reading-link:hover {
+            opacity: 0.65;
+        }
+
+
+        /* ---------------------------------------------------------
            RESPONSIVE
            --------------------------------------------------------- */
 
@@ -570,6 +630,15 @@
                 grid-template-columns: 1fr;
             }
 
+
+            .home-daily-reading-inner {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .home-daily-reading-image {
+                aspect-ratio: 16 / 10;
+            }
 
             .home-area {
                 padding: 30px 0;
@@ -1097,6 +1166,43 @@
 
 </section>
 
+
+
+<!-- =========================================================
+     DAILY BIBLE READING — EXTERNAL RESOURCE
+     ========================================================= -->
+
+<section class="home-daily-reading">
+    <div class="container">
+        <div class="home-daily-reading-inner">
+            <div class="home-daily-reading-visual">
+                <img
+                    class="home-daily-reading-image"
+                    src="images/bible-read.jpg"
+                    alt="An open Bible ready for daily reading and study"
+                    loading="lazy"
+                >
+            </div>
+
+            <div class="home-daily-reading-copy">
+                <p class="home-section-label">Daily Bible Reading</p>
+                <h2>Spend time in God's Word.</h2>
+                <p style="margin-top: 24px;">
+                    Make Scripture part of your daily life with daily Bible
+                    reading resources from Grace to You.
+                </p>
+                <a
+                    class="home-daily-reading-link"
+                    href="https://www.gty.org/devotionals?tab=daily-bible"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Visit GTY Daily Bible <span aria-hidden="true">→</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
 
 
 <!-- =========================================================
